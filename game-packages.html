@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR.Lens — Oyun Dil & Senaryo Paketleri Merkezi</title>
+  <meta name="description" content="MR.Lens için optimize edilmiş, 0.01 ms hızında çalışan GTA 5 ve diğer konsol/PC oyun senaryo paketlerini ücretsiz indirin.">
+  <link rel="icon" type="image/jpeg" href="assets/app-icon.jpg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#F0F9FF',
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+              cyan: '#00F0FF',
+              emerald: '#10B981',
+              purple: '#8B5CF6'
+            },
+            dark: {
+              900: '#060913',
+              800: '#0B0F1E',
+              700: '#111827',
+              card: 'rgba(15, 23, 42, 0.7)'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="bg-[#060913] text-slate-100 font-sans selection:bg-brand-500/30 selection:text-brand-cyan min-h-screen flex flex-col">
+
+  <!-- Glow Backgrounds -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-blue-600/15 via-purple-600/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-0 right-0 w-[500px] h-[400px] bg-emerald-500/10 blur-[140px] pointer-events-none -z-10"></div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="relative w-11 h-11 rounded-2xl overflow-hidden shadow-lg shadow-blue-500/20 ring-1 ring-white/20 group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/app-icon.jpg" alt="MR.Lens Logo" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-black text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-blue-200">
+            MR.<span class="text-brand-cyan">Lens</span>
+          </span>
+          <span class="text-[11px] text-slate-400 font-medium">Game Packages Hub</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-white transition-colors">Ana Sayfa</a>
+        <a href="index.html#features" class="hover:text-white transition-colors">Özellikler</a>
+        <a href="index.html#games" class="hover:text-white transition-colors">Oyunlar</a>
+        <a href="game-packages.html" class="text-brand-cyan font-bold border-b-2 border-brand-cyan pb-1">Oyun Paketleri</a>
+        <a href="index.html#voice-studio" class="hover:text-white transition-colors">Ses Odası</a>
+        <a href="index.html#contact" class="hover:text-white transition-colors">İletişim</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 hover:border-slate-500 text-xs font-semibold text-slate-200 transition-all">
+          ← Uygulama Sitesine Dön
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+    
+    <!-- Hero Banner -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider mb-6">
+        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+        0.01 ms ANE NPU & Swift Sıfır Gecikme
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-heading font-black tracking-tight mb-4">
+        Oyun Senaryo & <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Replik Paketleri</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        Konsol ve PC'de oynadığınız oyunların tam senaryo ve diyalog dosyalarını indirin. MR.Lens'e tek dokunuşla aktarın; altyazılar ekrana düştüğü an bulut beklemesi olmadan <strong class="text-white font-semibold">0.01 ms'de</strong> Türkçeleşsin.
+      </p>
+    </div>
+
+    <!-- FEATURED PACKAGE: GTA V FULL -->
+    <div class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+          <h2 class="text-2xl font-heading font-black tracking-tight text-white">Pilot Oyun Paketi</h2>
+        </div>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 font-bold">
+          v1.0.0 FULL SÜRÜM
+        </span>
+      </div>
+
+      <div class="rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-emerald-500/30 p-6 sm:p-10 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+        <!-- Accent Glow -->
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Info (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-md bg-emerald-500 text-black font-black text-xs tracking-wider uppercase font-mono">
+                ROCKSTAR GAMES
+              </span>
+              <span class="text-xs font-mono text-slate-400">69 Ana Hikaye Görevi • Los Santos</span>
+            </div>
+
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-heading font-black text-white tracking-tight mb-2">
+                Grand Theft Auto V — Full Senaryo Paketi
+              </h3>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Michael, Franklin, Trevor, Lamar ve Lester'ın tüm kilit replikleri! Meşhur <span class="text-emerald-400 font-semibold">"Franklin & Lamar Roast"</span> sahnesi (<em class="italic text-slate-200">"Can a loc come up in your crib?", "yee-yee ass haircut"</em>), North Yankton soygunu, Vangelico kuyumcusu, Paleto Bankası, FIB binası baskını ve Deathwish finalinin tamamı eksiksiz Türkçe eşleştirme veritabanı.
+              </p>
+            </div>
+
+            <!-- Badges & Metrics -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+                <span class="text-[10px] text-slate-400 uppercase font-mono block mb-1">Toplam Replik</span>
+                <span class="text-lg font-heading font-black text-emerald-400">5.291+</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+                <span class="text-[10px] text-slate-400 uppercase font-mono block mb-1">Eşleşme Hızı</span>
+                <span class="text-lg font-heading font-black text-cyan-400">0.01 ms</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+                <span class="text-[10px] text-slate-400 uppercase font-mono block mb-1">Dosya Formatı</span>
+                <span class="text-lg font-heading font-black text-white">JSON</span>
+              </div>
+              <div class="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+                <span class="text-[10px] text-slate-400 uppercase font-mono block mb-1">Paket Boyutu</span>
+                <span class="text-lg font-heading font-black text-purple-400">~1.4 MB</span>
+              </div>
+            </div>
+
+            <!-- Download Button -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+              <a href="assets/packages/gtav_full_package.json" download="gtav_full_package.json" class="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 hover:from-emerald-300 hover:to-emerald-400 text-black font-heading font-black text-base transition-all shadow-xl shadow-emerald-500/25 active:scale-95 group">
+                <i data-lucide="download" class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform"></i>
+                GTA 5 Paketini İndir (.json)
+              </a>
+              <span class="text-xs text-slate-400 text-center sm:text-left">
+                Tamamen ücretsiz • Direkt indirme • SHA-256 onaylı
+              </span>
+            </div>
+          </div>
+
+          <!-- Right Live Preview Card (5 cols) -->
+          <div class="lg:col-span-5 bg-slate-950/80 rounded-2xl border border-slate-800 p-5 space-y-3 font-mono text-xs shadow-inner">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-slate-400">
+              <span class="flex items-center gap-1.5 text-emerald-400 font-bold">
+                <i data-lucide="terminal" class="w-4 h-4"></i> Canlı Replik Örneği (0.01 ms)
+              </span>
+              <span class="text-[10px] text-slate-500">M02: Franklin and Lamar</span>
+            </div>
+
+            <div class="space-y-2.5 max-h-72 overflow-y-auto pr-2 custom-scrollbar">
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800/80">
+                <span class="text-emerald-400 font-bold">[Lamar]:</span> "Can a loc come up in your crib?"
+                <div class="text-slate-300 mt-1 pl-3 border-l-2 border-emerald-500">➔ "Eski bir dost evine uğrayabilir mi?"</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800/80">
+                <span class="text-cyan-400 font-bold">[Franklin]:</span> "Man, fuck you. I'll see you at work."
+                <div class="text-slate-300 mt-1 pl-3 border-l-2 border-cyan-500">➔ "Siktir git oradan adamım. İşte görüşürüz."</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800/80">
+                <span class="text-emerald-400 font-bold">[Lamar]:</span> "Ah, nigga, don't hate me 'cause I'm beautiful, nigga..."
+                <div class="text-slate-300 mt-1 pl-3 border-l-2 border-emerald-500">➔ "Ah zenci, yakışıklıyım diye benden nefret etme zenci..."</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800/80">
+                <span class="text-emerald-400 font-bold">[Lamar]:</span> "Maybe if you got rid of that old yee-yee ass haircut you'd get some bitches on your dick..."
+                <div class="text-slate-300 mt-1 pl-3 border-l-2 border-emerald-500">➔ "Belki o berbat saç tıraşından kurtulsaydın biraz kadın yüzü görürdün..."</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800/80">
+                <span class="text-cyan-400 font-bold">[Franklin]:</span> "WHAT?!"
+                <div class="text-slate-300 mt-1 pl-3 border-l-2 border-cyan-500">➔ "NE?!"</div>
+              </div>
+            </div>
+            
+            <div class="pt-2 text-center text-[10px] text-slate-500 border-t border-slate-800/60">
+              * MR.Lens bu sahneleri Gemini'ye gitmeden 0.01 milisaniyede ekrana yansıtır.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- UPCOMING PACKAGES GRID -->
+    <div class="mb-16">
+      <div class="mb-8">
+        <h2 class="text-2xl font-heading font-black tracking-tight text-white mb-2">Hazırlanan Diğer Oyun Paketleri</h2>
+        <p class="text-slate-400 text-sm">Topluluk oylaması ve yapımcı ekibimizin önceliklendirmesine göre hazırlanmakta olan yeni paketler:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Cyberpunk 2077 -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-yellow-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold px-2 py-1 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/30">GELİŞTİRİLMEDE</span>
+              <span class="text-xs text-slate-500">CD PROJEKT RED</span>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-white mb-2">Cyberpunk 2077</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">Night City jargonu, siberkasap terimleri, braindance ve V & Johnny Silverhand hikaye replikleri.</p>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 font-mono mb-3">Hedef: 120.000 Replik</div>
+            <button disabled class="w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 text-xs font-bold cursor-not-allowed">Yakında Aktif</button>
+          </div>
+        </div>
+
+        <!-- RDR 2 -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-red-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold px-2 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/30">GELİŞTİRİLMEDE</span>
+              <span class="text-xs text-slate-500">Rockstar Games</span>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-white mb-2">Red Dead Redemption 2</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">Arthur Morgan, Van der Linde çetesi, kamp sohbetleri ve Vahşi Batı kanun kaçağı jargonu.</p>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 font-mono mb-3">Hedef: 85.000 Replik</div>
+            <button disabled class="w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 text-xs font-bold cursor-not-allowed">Yakında Aktif</button>
+          </div>
+        </div>
+
+        <!-- The Witcher 3 -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/30">GELİŞTİRİLMEDE</span>
+              <span class="text-xs text-slate-500">CD PROJEKT RED</span>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-white mb-2">The Witcher 3: Wild Hunt</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">Geralt, Ciri, Yennefer, canavar sözlüğü ve Kıta'nın karanlık fantezi diyalogları.</p>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 font-mono mb-3">Hedef: 95.000 Replik</div>
+            <button disabled class="w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 text-xs font-bold cursor-not-allowed">Yakında Aktif</button>
+          </div>
+        </div>
+
+        <!-- Baldur's Gate 3 -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-pink-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono font-bold px-2 py-1 rounded bg-pink-500/10 text-pink-400 border border-pink-500/30">GELİŞTİRİLMEDE</span>
+              <span class="text-xs text-slate-500">Larian Studios</span>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-white mb-2">Baldur's Gate 3</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">Faerûn, Mind Flayer, zarlar ve derin D&D diyalog ağaçları için tam Türkçe kütüphane.</p>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 font-mono mb-3">Hedef: 220.000 Replik</div>
+            <button disabled class="w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 text-xs font-bold cursor-not-allowed">Yakında Aktif</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HOW TO IMPORT GUIDE -->
+    <div class="rounded-3xl bg-slate-900/40 border border-slate-800 p-8 sm:p-10 mb-16">
+      <h2 class="text-2xl font-heading font-black text-white mb-6 flex items-center gap-3">
+        <i data-lucide="help-circle" class="w-6 h-6 text-brand-cyan"></i>
+        İndirilen Paketi MR.Lens Uygulamasına Nasıl Yüklerim?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl bg-slate-800/40 border border-slate-700/50 space-y-2">
+          <div class="w-8 h-8 rounded-full bg-brand-cyan/20 text-brand-cyan font-bold font-mono flex items-center justify-center mb-3">1</div>
+          <h4 class="font-bold text-white text-base">Paketi İndirin</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Yukarıdaki yeşil <strong>"GTA 5 Paketini İndir (.json)"</strong> butonuna tıklayarak dosyayı iPhone veya iPad'inize kaydedin.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/40 border border-slate-700/50 space-y-2">
+          <div class="w-8 h-8 rounded-full bg-emerald-400/20 text-emerald-400 font-bold font-mono flex items-center justify-center mb-3">2</div>
+          <h4 class="font-bold text-white text-base">Uygulamadan İçe Aktarın</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            MR.Lens uygulamasını açın. Ana menüden <strong>Optimize Edilmiş Oyunlar</strong>'a girin ve <strong>"Paket İçe Aktar (.json)"</strong> butonuna dokunup indirdiğiniz dosyayı seçin.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/40 border border-slate-700/50 space-y-2">
+          <div class="w-8 h-8 rounded-full bg-purple-400/20 text-purple-400 font-bold font-mono flex items-center justify-center mb-3">3</div>
+          <h4 class="font-bold text-white text-base">0.01 ms Hızla Oynayın</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Paket anında uygulamanın bellek haritasına (RAM Hash) yerleşir. Artık oyunu oynarken tüm replikler sıfır gecikmeyle ekrana yansır!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/app-icon.jpg" alt="MR.Lens" class="w-7 h-7 rounded-lg">
+        <span class="text-sm font-semibold text-slate-300">MR.Lens Localization Hub</span>
+      </div>
+      <p class="text-xs text-slate-500">
+        © 2026 MR.Lens. Tüm hakları saklıdır. Oyun isimleri ve içerikleri ilgili stüdyoların tescilli markalarıdır.
+      </p>
+      <div class="flex items-center gap-4 text-xs text-slate-400">
+        <a href="mailto:mrlensapp@gmail.com" class="hover:text-white transition-colors">mrlensapp@gmail.com</a>
+        <a href="index.html" class="hover:text-white transition-colors">Ana Sayfa</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

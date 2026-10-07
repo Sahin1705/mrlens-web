@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR.Lens — Konsol ve PC Oyunları İçin Gerçek Zamanlı Çeviri & Dublaj</title>
+  <meta name="description" content="18 FPS Turbo Vision OCR, Apple Neural Engine ve Gemini 3.5 Flash Lite destekli gerçek zamanlı oyun altyazı çevirisi ve sesli dublaj uygulaması.">
+  <link rel="icon" type="image/jpeg" href="assets/app-icon.jpg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#F0F9FF',
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+              cyan: '#00F0FF',
+              emerald: '#10B981',
+              purple: '#8B5CF6'
+            },
+            dark: {
+              900: '#060913',
+              800: '#0B0F1E',
+              700: '#111827',
+              card: 'rgba(15, 23, 42, 0.7)'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="bg-[#060913] text-slate-100 min-h-screen relative selection:bg-blue-600 selection:text-white">
+
+  <!-- Ambient Glowing Orbs -->
+  <div class="glow-orb-blue top-[-100px] left-1/2 -translate-x-1/2"></div>
+  <div class="glow-orb-purple top-[500px] right-[-100px]"></div>
+
+  <!-- Background Grid Pattern -->
+  <div class="fixed inset-0 bg-[linear-gradient(to_right,#1f29370f_1px,transparent_1px),linear-gradient(to_bottom,#1f29370f_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none z-0"></div>
+
+  <!-- Main Container -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#060913]/80 border-b border-slate-800/80 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="relative">
+            <img src="assets/app-icon.jpg" alt="MR.Lens Logo" class="w-11 h-11 rounded-xl shadow-lg shadow-blue-500/20 object-cover border border-blue-500/30 group-hover:scale-105 transition-transform duration-300">
+            <span class="absolute -bottom-1 -right-1 flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2">
+              <span class="text-xl font-extrabold tracking-tight font-heading text-white">MR.Lens</span>
+              <span class="px-2 py-0.5 text-[10px] font-bold tracking-wider rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-mono">v0.96 PRO</span>
+            </div>
+            <span class="text-xs text-slate-400 font-medium tracking-tight">Real-Time Gaming AI</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="#features" data-i18n="navFeatures" class="hover:text-blue-400 transition-colors">Özellikler</a>
+          <a href="#simulator" data-i18n="navSimulator" class="hover:text-blue-400 transition-colors">Senaryolar</a>
+          <a href="#games" data-i18n="navGames" class="hover:text-blue-400 transition-colors">Oyunlar</a>
+          <a href="game-packages.html" class="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold hover:bg-emerald-500/20 transition-all flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Oyun Paketleri
+          </a>
+          <a href="#voice-studio" data-i18n="navVoiceStudio" class="hover:text-blue-400 transition-colors">Ses Odası</a>
+          <a href="#roadmap" data-i18n="navRoadmap" class="hover:text-blue-400 transition-colors">Yol Haritası</a>
+          <a href="#faq" data-i18n="navFaq" class="hover:text-blue-400 transition-colors">SSS</a>
+        </nav>
+
+        <!-- Right Side: Multi-Language Selector & CTA -->
+        <div class="flex items-center gap-4">
+          
+          <!-- Language Dropdown -->
+          <div class="relative" id="lang-dropdown-container">
+            <button onclick="toggleLangDropdown()" class="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 text-sm font-medium text-slate-200 transition-all shadow-sm">
+              <span id="current-flag" class="text-lg">🇹🇷</span>
+              <span id="current-lang-label" class="hidden sm:inline text-xs font-semibold">Türkçe</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+            </button>
+
+            <!-- Dropdown Menu (10 Languages) -->
+            <div id="lang-dropdown-menu" class="hidden absolute right-0 mt-2 w-52 rounded-2xl bg-slate-900/95 backdrop-blur-2xl border border-slate-700 shadow-2xl p-2 z-50 grid grid-cols-1 gap-1">
+              <button onclick="setLanguage('tr'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇹🇷</span> Türkçe (Ana Dil)
+              </button>
+              <button onclick="setLanguage('en'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇺🇸</span> English
+              </button>
+              <button onclick="setLanguage('de'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇩🇪</span> Deutsch
+              </button>
+              <button onclick="setLanguage('fr'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇫🇷</span> Français
+              </button>
+              <button onclick="setLanguage('es'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇪🇸</span> Español
+              </button>
+              <button onclick="setLanguage('it'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇮🇹</span> Italiano
+              </button>
+              <button onclick="setLanguage('ru'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇷🇺</span> Русский
+              </button>
+              <button onclick="setLanguage('ja'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇯🇵</span> 日本語
+              </button>
+              <button onclick="setLanguage('ko'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇰🇷</span> 한국어
+              </button>
+              <button onclick="setLanguage('zh'); toggleLangDropdown();" class="flex items-center gap-3 px-3 py-2 rounded-xl text-left text-xs font-medium text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors">
+                <span class="text-base">🇨🇳</span> 简体中文
+              </button>
+            </div>
+          </div>
+
+          <!-- Early Access Button -->
+          <a href="#download" data-i18n="earlyAccessBtn" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            Erken Erişim
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Hero Content Header -->
+        <div class="text-center max-w-4xl mx-auto">
+          
+          <!-- Announcement Pill -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-300 text-xs font-semibold mb-8 backdrop-blur-md shadow-inner">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span data-i18n="badge">v0.96 BETA • APPLE NEURAL ENGINE & GEMINI 2.5 FLASH DESTEKLİ</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-6 font-heading text-white">
+            <span data-i18n="heroTitlePrefix">Konsol ve PC Oyunlarını</span><br>
+            <span class="text-gradient-cyan" data-i18n="heroTitleHighlight">Anında Türkçe</span> 
+            <span data-i18n="heroTitleSuffix">Oyna ve Dinle.</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal" data-i18n="heroSubtitle">
+            18 FPS Turbo Vision OCR, 3-Kademeli Sıfır Gecikmeli Çeviri Mimarisi ve Yapay Zeka Stüdyo Dublajı ile TV ve monitörünüzdeki her oyunu yerinde Türkçeleştirin.
+          </p>
+
+          <!-- Action Buttons Area -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            
+            <!-- Download Button -->
+            <a href="#download" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-slate-950 font-bold text-base hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-white/10 group">
+              <svg class="w-6 h-6 fill-current text-slate-900 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.65 1.35-.57.65-1.07 1.71-.93 2.74 1.01.08 2.05-.48 2.66-1.22z"/>
+              </svg>
+              <span data-i18n="downloadBtn">App Store'dan İndir</span>
+            </a>
+
+            <!-- Try Simulator Button -->
+            <a href="#simulator" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-white font-semibold text-base hover:bg-slate-700/80 hover:border-slate-600 transition-all shadow-lg">
+              <i data-lucide="play-circle" class="w-5 h-5 text-blue-400"></i>
+              <span data-i18n="watchDemoBtn">Simülatörü Dene</span>
+            </a>
+
+          </div>
+
+          <!-- REQUIRED INFO BAR BEHIND/BELOW DOWNLOAD BUTTON -->
+          <div class="max-w-xl mx-auto mb-14">
+            <div class="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-900/40 via-emerald-950/40 to-blue-900/40 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-medium backdrop-blur-md shadow-lg shadow-emerald-500/5">
+              <span class="flex h-2.5 w-2.5 relative flex-shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span data-i18n="releaseInfoBar">🛡️ Uygulama App Store'da yayınlanmak üzere son inceleme ve geliştirme aşamasındadır. Çok yakında yayında!</span>
+            </div>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div class="glass-panel p-4 rounded-2xl text-center border-slate-800">
+              <div class="text-2xl sm:text-3xl font-black font-heading text-blue-400" data-i18n="statFps">18 FPS</div>
+              <div class="text-xs text-slate-400 mt-1 font-medium" data-i18n="statFpsDesc">Donanım ANE Turbo OCR</div>
+            </div>
+            <div class="glass-panel p-4 rounded-2xl text-center border-slate-800">
+              <div class="text-2xl sm:text-3xl font-black font-heading text-emerald-400" data-i18n="statLatency">&lt; 15 ms</div>
+              <div class="text-xs text-slate-400 mt-1 font-medium" data-i18n="statLatencyDesc">Sıfır Gecikmeli NPU Çevirisi</div>
+            </div>
+            <div class="glass-panel p-4 rounded-2xl text-center border-slate-800">
+              <div class="text-2xl sm:text-3xl font-black font-heading text-purple-400" data-i18n="statWords">1M+</div>
+              <div class="text-xs text-slate-400 mt-1 font-medium" data-i18n="statWordsDesc">Oyun Terimli Özel Sözlük</div>
+            </div>
+            <div class="glass-panel p-4 rounded-2xl text-center border-slate-800">
+              <div class="text-2xl sm:text-3xl font-black font-heading text-cyan-400" data-i18n="statEngines">5x Motor</div>
+              <div class="text-xs text-slate-400 mt-1 font-medium" data-i18n="statEnginesDesc">Akustik Stüdyo Dublajı</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REAL-WORLD SETUPS & PHOTO CAROUSEL SECTION -->
+    <section id="simulator" class="py-20 relative bg-slate-950/80 border-y border-slate-800/80 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Carousel Navigation Arrows -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold mb-3">
+              <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+              <span>CANLI KULLANIM SENARYOLARI</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-3" data-i18n="simSectionTitle">
+              Gerçek Dünyada MR.Lens: Ekran Karşısında Canlı Kullanım
+            </h2>
+            <p class="text-slate-400 text-base sm:text-lg" data-i18n="simSectionSubtitle">
+              PlayStation 5, Xbox, PC, Nintendo Switch veya TV'deki yabancı film ve diziler... iPhone'unuzu ekranın karşısına koyun, MR.Lens anında Türkçeleştirsin.
+            </p>
+          </div>
+
+          <!-- Carousel Arrow Controls -->
+          <div class="flex items-center gap-3 self-start md:self-auto">
+            <button onclick="slideCarousel('left')" aria-label="Önceki" class="w-12 h-12 rounded-2xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-white transition-all shadow-lg hover:scale-105 active:scale-95">
+              <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button onclick="slideCarousel('right')" aria-label="Sonraki" class="w-12 h-12 rounded-2xl bg-blue-600 hover:bg-blue-500 border border-blue-500/50 flex items-center justify-center text-white transition-all shadow-lg shadow-blue-600/30 hover:scale-105 active:scale-95">
+              <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Swipeable Carousel Container -->
+        <div id="setup-carousel" class="carousel-container flex gap-6 overflow-x-auto snap-x snap-mandatory py-4 px-1">
+          
+          <!-- Card 1: PlayStation 5 -->
+          <div class="carousel-card flex-none w-[320px] sm:w-[460px] lg:w-[540px] snap-center glass-panel rounded-3xl overflow-hidden border border-slate-800 group">
+            <div class="relative aspect-[16/9] overflow-hidden cursor-pointer" onclick="openLightbox('assets/setup-ps5.jpg', 'PlayStation 5 — 4K OLED TV', 'STAY LOW! THEY\'RE EVERYWHERE! -> ALÇAKTA KALIN! HER YERDELER!')">
+              <img src="assets/setup-ps5.jpg" alt="PlayStation 5 MR.Lens Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-black/40"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-blue-600/90 text-white backdrop-blur-md shadow-lg border border-blue-400/40">
+                  🎮 PlayStation 5
+                </span>
+                <span class="px-2.5 py-1 rounded-xl text-[10px] font-semibold font-mono bg-black/60 text-slate-300 backdrop-blur-md border border-white/10">
+                  4K OLED TV
+                </span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[10px] font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  18 FPS ANE
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Yakınlaştır
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-mono text-blue-400 uppercase tracking-wider mb-1">Aksiyon & Macera</div>
+              <h3 class="text-xl font-bold font-heading text-white mb-4">DualSense & TV Karşısında Sıfır Gecikme</h3>
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 mb-4">
+                <div class="text-xs text-slate-400">
+                  <span class="font-mono text-slate-500">TV EKRANI:</span> "STAY LOW! THEY'RE EVERYWHERE!"
+                </div>
+                <div class="text-sm font-bold text-emerald-400 flex items-center justify-between">
+                  <div>
+                    <span class="font-mono text-emerald-500 text-xs">MR.LENS:</span> "ALÇAKTA KALIN! HER YERDELER!"
+                  </div>
+                  <button onclick="speakSetupLine('Alçakta kalın! Her yerdeler!')" class="p-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 transition-colors" title="Dublajı Dinle">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i> Apple NPU Çevrimdışı
+                </span>
+                <span class="font-mono text-slate-500">12 ms • 0 Kurulum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Xbox Series X -->
+          <div class="carousel-card flex-none w-[320px] sm:w-[460px] lg:w-[540px] snap-center glass-panel rounded-3xl overflow-hidden border border-slate-800 group">
+            <div class="relative aspect-[16/9] overflow-hidden cursor-pointer" onclick="openLightbox('assets/setup-xbox.jpg', 'Xbox Series X — Curved Gaming Monitör', 'WAKE UP! WE HAVE A PROBLEM! -> UYAN! BİR SORUNUMUZ VAR!')">
+              <img src="assets/setup-xbox.jpg" alt="Xbox Series X MR.Lens Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-black/40"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-emerald-600/90 text-white backdrop-blur-md shadow-lg border border-emerald-400/40">
+                  🟢 Xbox Series X
+                </span>
+                <span class="px-2.5 py-1 rounded-xl text-[10px] font-semibold font-mono bg-black/60 text-slate-300 backdrop-blur-md border border-white/10">
+                  Curved Monitör
+                </span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[10px] font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  FASTPATH HİBRİT
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Yakınlaştır
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-1">Bilim Kurgu & Açık Dünya</div>
+              <h3 class="text-xl font-bold font-heading text-white mb-4">Konsol Monitöründe 1:1 Bounding Box</h3>
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 mb-4">
+                <div class="text-xs text-slate-400">
+                  <span class="font-mono text-slate-500">MONİTÖR EKRANI:</span> "WAKE UP! WE HAVE A PROBLEM!"
+                </div>
+                <div class="text-sm font-bold text-emerald-400 flex items-center justify-between">
+                  <div>
+                    <span class="font-mono text-emerald-500 text-xs">MR.LENS:</span> "UYAN! BİR SORUNUMUZ VAR!"
+                  </div>
+                  <button onclick="speakSetupLine('Uyan! Bir sorunumuz var!')" class="p-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 transition-colors" title="Dublajı Dinle">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="zap" class="w-4 h-4 text-emerald-400"></i> 1M+ Sözlük &lt; 0.5 ms
+                </span>
+                <span class="font-mono text-slate-500">11 ms • Masa Standı</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Film & Dizi OLED TV -->
+          <div class="carousel-card flex-none w-[320px] sm:w-[460px] lg:w-[540px] snap-center glass-panel rounded-3xl overflow-hidden border border-slate-800 group">
+            <div class="relative aspect-[16/9] overflow-hidden cursor-pointer" onclick="openLightbox('assets/setup-cinema.jpg', 'Film & Dizi — 65&quot; OLED TV', 'I CANNOT FORGIVE WHAT HAPPENED. -> OLANLARI ASLA AFFEDEMEM.')">
+              <img src="assets/setup-cinema.jpg" alt="Movie and Cinema MR.Lens Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-black/40"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-purple-600/90 text-white backdrop-blur-md shadow-lg border border-purple-400/40">
+                  🎬 Film & Dizi
+                </span>
+                <span class="px-2.5 py-1 rounded-xl text-[10px] font-semibold font-mono bg-black/60 text-slate-300 backdrop-blur-md border border-white/10">
+                  65" OLED TV
+                </span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[10px] font-bold font-mono bg-purple-500/20 text-purple-300 border border-purple-500/40 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                  SİNEMATİK DUBLAJ
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Yakınlaştır
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-mono text-purple-400 uppercase tracking-wider mb-1">Ev Sineması & Streaming</div>
+              <h3 class="text-xl font-bold font-heading text-white mb-4">Yabancı Dizi ve Filmleri Türkçe Dinleyin</h3>
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 mb-4">
+                <div class="text-xs text-slate-400">
+                  <span class="font-mono text-slate-500">DİZİ ALTYAZISI:</span> "I CANNOT FORGIVE WHAT HAPPENED."
+                </div>
+                <div class="text-sm font-bold text-purple-300 flex items-center justify-between">
+                  <div>
+                    <span class="font-mono text-purple-400 text-xs">MR.LENS:</span> "OLANLARI ASLA AFFEDEMEM."
+                  </div>
+                  <button onclick="speakSetupLine('Olanları asla affedemem.')" class="p-2 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 transition-colors" title="Dublajı Dinle">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="mic" class="w-4 h-4 text-purple-400"></i> Akustik Ton & Cinsiyet Algılama
+                </span>
+                <span class="font-mono text-slate-500">Sehpa Standı • Konfor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Nintendo Switch -->
+          <div class="carousel-card flex-none w-[320px] sm:w-[460px] lg:w-[540px] snap-center glass-panel rounded-3xl overflow-hidden border border-slate-800 group">
+            <div class="relative aspect-[16/9] overflow-hidden cursor-pointer" onclick="openLightbox('assets/setup-switch.jpg', 'Nintendo Switch — Japonca JRPG', '王国の危機だ。あなたの助けが必要です！ -> KRALLIK SENİN YARDIMINI BEKLİYOR!')">
+              <img src="assets/setup-switch.jpg" alt="Nintendo Switch MR.Lens Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-black/40"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-rose-600/90 text-white backdrop-blur-md shadow-lg border border-rose-400/40">
+                  🔴 Nintendo Switch
+                </span>
+                <span class="px-2.5 py-1 rounded-xl text-[10px] font-semibold font-mono bg-black/60 text-slate-300 backdrop-blur-md border border-white/10">
+                  OLED Tabletop
+                </span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[10px] font-bold font-mono bg-rose-500/20 text-rose-300 border border-rose-500/40 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
+                  KANJI/KANA OCR
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Yakınlaştır
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-mono text-rose-400 uppercase tracking-wider mb-1">JRPG & Macera</div>
+              <h3 class="text-xl font-bold font-heading text-white mb-4">Japonca Oyunları Anında Türkçeleştirin</h3>
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 mb-4">
+                <div class="text-xs text-slate-400">
+                  <span class="font-mono text-slate-500">JAPONCA DİYALOG:</span> "王国の危機だ。あなたの助けが必要です！"
+                </div>
+                <div class="text-sm font-bold text-rose-300 flex items-center justify-between">
+                  <div>
+                    <span class="font-mono text-rose-400 text-xs">MR.LENS:</span> "KRALLIK SENİN YARDIMINI BEKLİYOR!"
+                  </div>
+                  <button onclick="speakSetupLine('Krallık senin yardımını bekliyor!')" class="p-2 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 transition-colors" title="Dublajı Dinle">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="languages" class="w-4 h-4 text-rose-400"></i> Boşluksuz Karakter Desteği
+                </span>
+                <span class="font-mono text-slate-500">14 ms • Taşınabilir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Ultra-Wide PC Gaming -->
+          <div class="carousel-card flex-none w-[320px] sm:w-[460px] lg:w-[540px] snap-center glass-panel rounded-3xl overflow-hidden border border-slate-800 group">
+            <div class="relative aspect-[16/9] overflow-hidden cursor-pointer" onclick="openLightbox('assets/setup-pc.jpg', 'PC Gaming — Ultra-Wide Monitör', 'NEVER TRUST A FIXER IN THIS CITY -> BU ŞEHİRDE ASLA BİR ARACIYA GÜVENME')">
+              <img src="assets/setup-pc.jpg" alt="PC Gaming MR.Lens Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-black/40"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-cyan-600/90 text-white backdrop-blur-md shadow-lg border border-cyan-400/40">
+                  🖥️ PC Gaming
+                </span>
+                <span class="px-2.5 py-1 rounded-xl text-[10px] font-semibold font-mono bg-black/60 text-slate-300 backdrop-blur-md border border-white/10">
+                  Ultra-Wide Monitör
+                </span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[10px] font-bold font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                  MAC COMPANION
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Yakınlaştır
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-1">Masaüstü & Cyberpunk RPG</div>
+              <h3 class="text-xl font-bold font-heading text-white mb-4">Geniş Monitörde MagSafe Kol Entegrasyonu</h3>
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 mb-4">
+                <div class="text-xs text-slate-400">
+                  <span class="font-mono text-slate-500">MONİTÖR ALTYAZISI:</span> "NEVER TRUST A FIXER IN THIS CITY"
+                </div>
+                <div class="text-sm font-bold text-cyan-300 flex items-center justify-between">
+                  <div>
+                    <span class="font-mono text-cyan-400 text-xs">MR.LENS:</span> "BU ŞEHİRDE ASLA BİR ARACIYA GÜVENME"
+                  </div>
+                  <button onclick="speakSetupLine('Bu şehirde asla bir aracıya güvenme.')" class="p-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 transition-colors" title="Dublajı Dinle">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="airplay" class="w-4 h-4 text-cyan-400"></i> Ekran Akışı / Kamera 2 HUD
+                </span>
+                <span class="font-mono text-slate-500">18 FPS Turbo Vision</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Anime TV Setup -->
+          <div class="carousel-card flex-none w-[320px] sm:w-[460px] lg:w-[540px] snap-center glass-panel rounded-3xl overflow-hidden border border-slate-800 group">
+            <div class="relative aspect-[16/9] overflow-hidden cursor-pointer" onclick="openLightbox('assets/setup-anime.jpg', 'Anime & J-Drama — Salon TV Yayını', 'この戦いを共に勝ち抜こう -> BU SAVAŞI BİRLİKTE KAZANACAĞIZ')">
+              <img src="assets/setup-anime.jpg" alt="Anime TV MR.Lens Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-black/40"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-amber-600/90 text-white backdrop-blur-md shadow-lg border border-amber-400/40">
+                  🎌 Anime & Dizi
+                </span>
+                <span class="px-2.5 py-1 rounded-xl text-[10px] font-semibold font-mono bg-black/60 text-slate-300 backdrop-blur-md border border-white/10">
+                  Salon TV Yayını
+                </span>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-[10px] font-bold font-mono bg-amber-500/20 text-amber-300 border border-amber-500/40 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                  CANLI AKUSTİK
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 flex items-center gap-1.5">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Yakınlaştır
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs font-mono text-amber-400 uppercase tracking-wider mb-1">Doğu Asya & Anime Kültürü</div>
+              <h3 class="text-xl font-bold font-heading text-white mb-4">Karmaşık Japonca Cümleleri Tek Hamlede Çözün</h3>
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 mb-4">
+                <div class="text-xs text-slate-400">
+                  <span class="font-mono text-slate-500">ANIME ALTYAZISI:</span> "この戦いを共に勝ち抜こう"
+                </div>
+                <div class="text-sm font-bold text-amber-300 flex items-center justify-between">
+                  <div>
+                    <span class="font-mono text-amber-400 text-xs">MR.LENS:</span> "BU SAVAŞI BİRLİKTE KAZANACAĞIZ"
+                  </div>
+                  <button onclick="speakSetupLine('Bu savaşı birlikte kazanacağız!')" class="p-2 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 transition-colors" title="Dublajı Dinle">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="radio" class="w-4 h-4 text-amber-400"></i> Akustik Dublaj Seslendirme
+                </span>
+                <span class="font-mono text-slate-500">18 FPS • Konforlu İzleme</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Hint Info -->
+        <div class="text-center mt-6 text-xs text-slate-500 flex items-center justify-center gap-2">
+          <i data-lucide="move-horizontal" class="w-4 h-4 text-slate-400"></i>
+          <span>Tüm senaryoları görmek için sağa ve sola kaydırın ya da oklara tıklayın</span>
+        </div>
+
+    <!-- FEATURED & TESTED GAMES SHOWCASE SECTION -->
+    <section id="games" class="py-24 relative bg-[#070B16] border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+            <i data-lucide="gamepad-2" class="w-3.5 h-3.5"></i>
+            <span>TEST EDİLEN 50+ POPÜLER OYUN</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4">
+            En Sevdiğiniz Oyunlar Kendi Dilinizde
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            MR.Lens, oyun dünyasının en karmaşık RPG jargonlarını, hızlı aksiyon repliklerini ve açık dünya maceralarını tanıyacak şekilde optimize edildi.
+          </p>
+
+          <!-- Game Filter Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+            <button onclick="filterGames('all')" data-platform="all" class="game-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-500/25 border border-blue-400/40">
+              Tümü (8)
+            </button>
+            <button onclick="filterGames('playstation')" data-platform="playstation" class="game-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🎮 PlayStation
+            </button>
+            <button onclick="filterGames('xbox')" data-platform="xbox" class="game-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🟢 Xbox
+            </button>
+            <button onclick="filterGames('pc')" data-platform="pc" class="game-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🖥️ PC Gaming
+            </button>
+            <button onclick="filterGames('switch')" data-platform="switch" class="game-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🔴 Nintendo Switch
+            </button>
+          </div>
+        </div>
+
+        <!-- Games Grid (8 Cards) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="games-grid">
+          
+          <!-- Game 1: GTA VI -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation xbox">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">ROCKSTAR</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">Grand Theft Auto VI</h3>
+              <p class="text-xs text-slate-400 mb-4">Vice City suç dünyası, hızlı araba içi diyalogları ve sokak argoları.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">18 FPS Turbo</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Sokak Argoları</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 2: Cyberpunk 2077 -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation xbox pc">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">CD PROJEKT</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">Cyberpunk 2077</h3>
+              <p class="text-xs text-slate-400 mb-4">Night City jargonu, Fixer, Cyberware ve Braindance teknik terimleri.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">1M+ SQLite Lore</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">FastPath Hibrit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 3: God of War Ragnarök -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation pc">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">SANTA MONICA</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">God of War Ragnarök</h3>
+              <p class="text-xs text-slate-400 mb-4">İskandinav mitolojisi, Kratos ve Atreus'un derin dramatik diyalogları.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Mitoloji Sözlüğü</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Akustik Dublaj</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 4: Elden Ring -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation xbox pc">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">FROMSOFTWARE</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">Elden Ring</h3>
+              <p class="text-xs text-slate-400 mb-4">Arkaik ve şiirsel İngilizce cümleler, karmaşık Souls-like hikaye parçaları.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Arkaik Dil Koruması</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Gemini 3.5 BYOK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 5: The Last of Us Part I & II -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation pc">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">NAUGHTY DOG</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">The Last of Us Part I & II</h3>
+              <p class="text-xs text-slate-400 mb-4">Post-apokaliptik hayatta kalma, fısıltı ve bağırış arasındaki dinamik diyaloglar.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Duygu Tespiti</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Kokpit HUD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 6: Red Dead Redemption 2 -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation xbox pc">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">ROCKSTAR</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">Red Dead Redemption 2</h3>
+              <p class="text-xs text-slate-400 mb-4">1899 Vahşi Batı dönemi kovboy argoları ve at üstünde geçen uzun sohbetler.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Western Argoları</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Apple NPU Çevrimdışı</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 7: Baldur's Gate 3 -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="playstation xbox pc">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">LARIAN</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">Baldur's Gate 3</h3>
+              <p class="text-xs text-slate-400 mb-4">Devasa D&D evreni, 2 milyondan fazla diyalog kelimesi ve büyü isimleri.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">D&D Terim Koruması</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Çok Satır Desteği</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 8: Zelda: Tears of the Kingdom -->
+          <div class="game-card-item glass-panel glass-panel-interactive rounded-2xl p-5 border-slate-800 flex flex-col justify-between" data-platforms="switch">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">NINTENDO</span>
+                <span class="flex items-center gap-1 text-[10px] font-mono text-emerald-400 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> %100 UYUMLU
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-heading text-white mb-1">Zelda: Tears of the Kingdom</h3>
+              <p class="text-xs text-slate-400 mb-4">Hyrule krallığı, Japonca ve İngilizce diyaloglar, taşınabilir ekran modu.</p>
+            </div>
+            <div class="space-y-2 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Japonca Kanji/Kana</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">Tabletop Uyumu</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Game Packages Callout Banner -->
+        <div class="mt-14 glass-panel p-6 sm:p-8 rounded-3xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/40 via-slate-900/80 to-blue-950/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-emerald-950/30">
+          <div class="flex items-center gap-4 text-left">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-3xl flex-shrink-0 shadow-inner">
+              🎮
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">YENİ • v1.0 PAKETLER</span>
+                <span class="text-xs text-slate-400 font-medium">GTA V Full Senaryo Paketi Yayında</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-heading text-white">Özel Oyun Çeviri & Senaryo Paketleri Merkezi</h3>
+              <p class="text-slate-400 text-xs sm:text-sm mt-0.5 max-w-xl">Popüler oyunlar için 0.01 ms sıfır gecikmeli, internet gerektirmeyen yerel JSON senaryo paketlerini tek tıkla indirin ve uygulamaya yükleyin.</p>
+            </div>
+          </div>
+          <a href="game-packages.html" class="whitespace-nowrap px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-sm shadow-xl shadow-emerald-500/25 flex items-center gap-2.5 transition-all hover:scale-105 active:scale-95 flex-shrink-0">
+            <span>Paketleri İncele & İndir</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORE FEATURES SECTION -->
+    <section id="features" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4" data-i18n="featuresTitle">
+            Yeni Nesil Oyun Erişilebilirliği
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg" data-i18n="featuresSubtitle">
+            Sıradan çeviri araçları oyun hızına yetişemez. MR.Lens, Apple Silicon NPU ve özel oyun sözlüğü ile oyuncular için tasarlandı.
+          </p>
+        </div>
+
+        <!-- 6 Core Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Feature 1 -->
+          <div class="glass-panel glass-panel-interactive p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="zap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="feat1Title">18 FPS Turbo Vision OCR</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="feat1Desc">
+              Hızlı sahne geçişlerinde ve tek kelimelik ani repliklerde bile altyazıyı milisaniyeler içinde yakalayan donanımsal ANE tarama hızı.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="glass-panel glass-panel-interactive p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="feat2Title">3-Kademeli Hibrit Çeviri</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="feat2Desc">
+              1M+ SQLite Oyun Sözlüğü (&lt;0.5ms) → Çevrimdışı Apple NPU (15ms) → Gemini 3.5 Flash Lite BYOK akıllı yedekleme hattı.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="glass-panel glass-panel-interactive p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="mic" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="feat3Title">Yapay Zeka Stüdyo Dublajı</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="feat3Desc">
+              ElevenLabs, OpenAI ve Apple TTS motorlarıyla karakterlerin ses tonunu ve cinsiyetini tespit ederek anlık Türkçe seslendirme.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="glass-panel glass-panel-interactive p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="feat4Title">Kamera 2 Kokpit Ekranı</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="feat4Desc">
+              Oyun ekranınızı kapatmayan, ekranın alt kısmında akıcı HUD kartları şeklinde dizilen 1:1 donanım uyumlu tasarım.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="glass-panel glass-panel-interactive p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="tv" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="feat5Title">Mac Companion & Konsol</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="feat5Desc">
+              PlayStation 5, Xbox ve Nintendo Switch TV ekranları veya doğrudan Mac ekran akışı (Remote Stream) üzerinden tam senkronizasyon.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="glass-panel glass-panel-interactive p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="feat6Title">%100 Gizlilik & BYOK</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="feat6Desc">
+              Verileriniz cihazınızda kalır. İster tamamen internetsiz çevrimdışı motoru, ister kendi Gemini API anahtarınızı sınırsızca kullanın.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    <!-- VOICE STUDIO & SOUNDBOARD SECTION -->
+    <section id="voice-studio" class="py-24 relative bg-gradient-to-b from-[#060913] via-[#090D1C] to-[#060913] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold mb-4">
+            <i data-lucide="mic" class="w-3.5 h-3.5"></i>
+            <span>AKUSTİK STÜDYO DUBLAJI</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4">
+            Karakterlerin Sesine Kulak Verin
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            MR.Lens, ekrandaki konuşmacının cinsiyetini ve ses perdesini otomatik tespit ederek uygun yapay zeka tonunu anında seslendirir. Aşağıdaki motorları canlı dinleyin:
+          </p>
+        </div>
+
+        <!-- 4 Voice Player Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          
+          <!-- Voice 1: ElevenLabs Adam (Masculine) -->
+          <div id="voice-card-adam" class="glass-panel glass-panel-glow rounded-3xl p-6 sm:p-8 border-blue-500/30 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/40 text-blue-400 flex items-center justify-center font-bold">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-white font-heading">ElevenLabs — Karizmatik Erkek Tonu</h4>
+                    <span class="text-xs text-slate-400">Örnek: Kratos, Geralt, Arthur Morgan</span>
+                  </div>
+                </div>
+                <div id="voice-bars-adam" class="flex items-center gap-1 voice-wave-bar">
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-sm text-slate-200 italic mb-6">
+                "Savaş bittiğinde geriye sadece hayatta kalanlar kalır. Kalkanını indirme çocuk, daha yolumuz uzun."
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+              <span class="text-xs font-mono text-blue-400">Derin Bariton • %98 Duygu Doğruluğu</span>
+              <button id="voice-btn-adam" onclick="playSampleVoice('adam')" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all shadow-md shadow-blue-600/30 flex items-center gap-2">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                <span>Sesi Dinle</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Voice 2: ElevenLabs Rachel (Feminine) -->
+          <div id="voice-card-rachel" class="glass-panel glass-panel-glow rounded-3xl p-6 sm:p-8 border-rose-500/30 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-rose-600/20 border border-rose-500/40 text-rose-400 flex items-center justify-center font-bold">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-white font-heading">ElevenLabs — Cesur Kadın Karakter</h4>
+                    <span class="text-xs text-slate-400">Örnek: Ciri, Ellie, Lara Croft</span>
+                  </div>
+                </div>
+                <div id="voice-bars-rachel" class="flex items-center gap-1 voice-wave-bar">
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-sm text-slate-200 italic mb-6">
+                "Eğer pes edersek buraya kadar verdiğimiz tüm mücadele boşa gider. Birlikte başaracağız, devam ediyoruz!"
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+              <span class="text-xs font-mono text-rose-400">Dinamik Soprano • Sinematik Vurgu</span>
+              <button id="voice-btn-rachel" onclick="playSampleVoice('rachel')" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs transition-all shadow-md shadow-rose-600/30 flex items-center gap-2">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                <span>Sesi Dinle</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Voice 3: OpenAI Onyx (Narrator) -->
+          <div id="voice-card-onyx" class="glass-panel glass-panel-glow rounded-3xl p-6 sm:p-8 border-purple-500/30 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-purple-600/20 border border-purple-500/40 text-purple-400 flex items-center justify-center font-bold">
+                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-white font-heading">OpenAI Onyx — Derin Anlatıcı Tonu</h4>
+                    <span class="text-xs text-slate-400">Örnek: Belgesel, RPG Girişleri, Lore Anlatımı</span>
+                  </div>
+                </div>
+                <div id="voice-bars-onyx" class="flex items-center gap-1 voice-wave-bar">
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-sm text-slate-200 italic mb-6">
+                "Gece Şehri'nin neon ışıkları parıldarken, karanlığın içinden yükselen bir fısıltı tüm kaderi sonsuza dek değiştirecekti."
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+              <span class="text-xs font-mono text-purple-400">Tok Anlatıcı • Yüksek Akıcılık</span>
+              <button id="voice-btn-onyx" onclick="playSampleVoice('onyx')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs transition-all shadow-md shadow-purple-600/30 flex items-center gap-2">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                <span>Sesi Dinle</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Voice 4: Apple NPU (Local Instant) -->
+          <div id="voice-card-apple" class="glass-panel glass-panel-glow rounded-3xl p-6 sm:p-8 border-emerald-500/30 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-bold">
+                    <i data-lucide="radio" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-white font-heading">Apple NPU — Hızlı Çevrimdışı Dublaj</h4>
+                    <span class="text-xs text-slate-400">Örnek: Telsiz Anonsları, Çatışma Uyarıları</span>
+                  </div>
+                </div>
+                <div id="voice-bars-apple" class="flex items-center gap-1 voice-wave-bar">
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                  <span class="audio-bar"></span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-sm text-slate-200 italic mb-6">
+                "Hedef tespit edildi. Saat üç yönünden yaklaşıyorlar. Siper alın ve telsizi hazır tutun."
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+              <span class="text-xs font-mono text-emerald-400">&lt; 10 ms • Sıfır Kota & Çevrimdışı</span>
+              <button id="voice-btn-apple" onclick="playSampleVoice('apple')" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-md shadow-emerald-600/30 flex items-center gap-2">
+                <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+                <span>Sesi Dinle</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE & COMPARISON TABLE -->
+    <section id="compare" class="py-20 relative bg-slate-950/60 border-t border-slate-800">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4" data-i18n="compareTitle">
+            Neden MR.Lens?
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg" data-i18n="compareSubtitle">
+            Geleneksel ekran çeviriciler ile MR.Lens mimarisi arasındaki farklar.
+          </p>
+        </div>
+
+        <!-- Table Card -->
+        <div class="glass-panel rounded-3xl overflow-hidden border-slate-800 shadow-xl">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-slate-900/80 border-b border-slate-800 text-xs font-mono text-slate-400 uppercase tracking-wider">
+                <tr>
+                  <th class="py-4 px-6" data-i18n="colFeature">Özellik</th>
+                  <th class="py-4 px-6 text-slate-400" data-i18n="colStandard">Klasik Çeviriciler</th>
+                  <th class="py-4 px-6 text-blue-400 font-bold" data-i18n="colMrLens">MR.Lens v0.90</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60">
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                  <td class="py-4 px-6 font-medium text-slate-200" data-i18n="compRow1">Yenileme Hızı (FPS)</td>
+                  <td class="py-4 px-6 text-rose-400 flex items-center gap-2">
+                    <i data-lucide="x" class="w-4 h-4"></i> <span data-i18n="compRow1Std">1 - 2 FPS (Gecikmeli)</span>
+                  </td>
+                  <td class="py-4 px-6 text-emerald-400 font-semibold">
+                    <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="compRow1Lens">18 FPS Turbo ANE</span></span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                  <td class="py-4 px-6 font-medium text-slate-200" data-i18n="compRow2">Çeviri Gecikmesi</td>
+                  <td class="py-4 px-6 text-rose-400 flex items-center gap-2">
+                    <i data-lucide="x" class="w-4 h-4"></i> <span data-i18n="compRow2Std">1500 - 3000 ms</span>
+                  </td>
+                  <td class="py-4 px-6 text-emerald-400 font-semibold">
+                    <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="compRow2Lens">12 - 50 ms (Anlık)</span></span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                  <td class="py-4 px-6 font-medium text-slate-200" data-i18n="compRow3">Oyun Terimleri & Lore</td>
+                  <td class="py-4 px-6 text-slate-400 flex items-center gap-2">
+                    <i data-lucide="minus" class="w-4 h-4 text-amber-400"></i> <span data-i18n="compRow3Std">Standart Genel Sözlük</span>
+                  </td>
+                  <td class="py-4 px-6 text-emerald-400 font-semibold">
+                    <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="compRow3Lens">1M+ Oyun Senaryo Sözlüğü</span></span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                  <td class="py-4 px-6 font-medium text-slate-200" data-i18n="compRow4">Sesli Dublaj</td>
+                  <td class="py-4 px-6 text-rose-400 flex items-center gap-2">
+                    <i data-lucide="x" class="w-4 h-4"></i> <span data-i18n="compRow4Std">Yok veya Robotik</span>
+                  </td>
+                  <td class="py-4 px-6 text-emerald-400 font-semibold">
+                    <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="compRow4Lens">5 Motorlu Akustik Dublaj</span></span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                  <td class="py-4 px-6 font-medium text-slate-200" data-i18n="compRow5">Ekran Düzeni</td>
+                  <td class="py-4 px-6 text-rose-400 flex items-center gap-2">
+                    <i data-lucide="x" class="w-4 h-4"></i> <span data-i18n="compRow5Std">Oyunun Üstünü Kapatır</span>
+                  </td>
+                  <td class="py-4 px-6 text-emerald-400 font-semibold">
+                    <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="compRow5Lens">Kokpit HUD Kartları</span></span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-800/30 transition-colors">
+                  <td class="py-4 px-6 font-medium text-slate-200" data-i18n="compRow6">İnternetsiz Çalışma</td>
+                  <td class="py-4 px-6 text-rose-400 flex items-center gap-2">
+                    <i data-lucide="x" class="w-4 h-4"></i> <span data-i18n="compRow6Std">İmkansız (Sürekli Cloud)</span>
+                  </td>
+                  <td class="py-4 px-6 text-emerald-400 font-semibold">
+                    <span class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="compRow6Lens">%100 Yerel NPU Desteği</span></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4" data-i18n="howTitle">
+            3 Adımda Başlayın
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg" data-i18n="howSubtitle">
+            Herhangi bir karmaşık ayar veya kablo olmadan saniyeler içinde oynamaya başlayın.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="glass-panel p-8 rounded-3xl relative text-center border-slate-800">
+            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/40 text-blue-400 flex items-center justify-center mx-auto mb-6 text-xl font-bold font-mono">
+              01
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="step1Title">1. Kamerayı Doğrult</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="step1Desc">
+              iPhone'unuzu TV veya monitörünüzün altyazı alanına hizalayın ya da Mac Companion ile bağlanın.
+            </p>
+          </div>
+
+          <div class="glass-panel p-8 rounded-3xl relative text-center border-slate-800">
+            <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/40 text-purple-400 flex items-center justify-center mx-auto mb-6 text-xl font-bold font-mono">
+              02
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="step2Title">2. Modunu ve Sesini Seç</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="step2Desc">
+              Kamera 1 Tam Ekran veya Kamera 2 Kokpit HUD modunu belirleyin; dublaj ses motorunuzu aktifleştirin.
+            </p>
+          </div>
+
+          <div class="glass-panel p-8 rounded-3xl relative text-center border-slate-800">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto mb-6 text-xl font-bold font-mono">
+              03
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="step3Title">3. Oyunun Tadını Çıkar</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="step3Desc">
+              18 FPS akışla anlık Türkçe altyazıların ve stüdyo dublajının keyfini çıkarın!
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ROADMAP SECTION -->
+    <section id="roadmap" class="py-24 relative bg-gradient-to-b from-[#060913] via-[#080D1D] to-[#060913] border-t border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold mb-4">
+            <i data-lucide="map" class="w-3.5 h-3.5"></i>
+            <span data-i18n="roadmapBadge">GELECEK VİZYONU & GELİŞTİRME PLANI</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4" data-i18n="roadmapTitle">
+            MR.Lens Yol Haritası
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg" data-i18n="roadmapSubtitle">
+            Konsol ve PC oyuncularına sıfır gecikmeli Türkçe deneyimi yaşatmak için sürekli genişleyen teknoloji yolculuğumuz.
+          </p>
+        </div>
+
+        <!-- Timeline Grid (4 Phases) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Phase 1: Completed -->
+          <div class="glass-panel p-6 rounded-3xl border-slate-800/80 flex flex-col justify-between relative group hover:border-emerald-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                <span data-i18n="phase1Status">TAMAMLANDI</span>
+              </span>
+            </div>
+            <div>
+              <div class="text-slate-500 font-mono text-xs tracking-wider uppercase mt-2 mb-1" data-i18n="phase1Num">FAZ 01</div>
+              <h3 class="text-lg font-bold font-heading text-white mb-2" data-i18n="phase1Title">Çekirdek Motor & ANE v0.90</h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="phase1Desc">
+                iPhone donanımını sınırlarına kadar zorlayan temel OCR ve yerel NPU çeviri motoru inşa edildi.
+              </p>
+              
+              <ul class="space-y-3 text-xs text-slate-300 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>18 FPS Apple Neural Engine Turbo Vision OCR</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>1.000.000+ Terimli SQLite Çevrimdışı Oyun Sözlüğü</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>Kamera 1 (HUD) & Kamera 2 (Yatay Kokpit) Modları</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>AVSpeech Akustik Sesli Dublaj Motoru</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Sürüm</span>
+              <span class="text-emerald-400 font-semibold">v0.90 Beta</span>
+            </div>
+          </div>
+
+          <!-- Phase 2: Current / Active -->
+          <div class="glass-panel p-6 rounded-3xl border-blue-500/40 relative flex flex-col justify-between shadow-lg shadow-blue-500/10 group hover:border-blue-400 transition-all duration-300">
+            <div class="absolute -top-3 left-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-blue-500/20 border border-blue-500/50 text-blue-300 text-xs font-mono font-semibold pulse-badge">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+                <span data-i18n="phase2Status">AKTİF GELİŞTİRME</span>
+              </span>
+            </div>
+            <div>
+              <div class="text-blue-400 font-mono text-xs tracking-wider uppercase mt-2 mb-1" data-i18n="phase2Num">FAZ 02</div>
+              <h3 class="text-lg font-bold font-heading text-white mb-2" data-i18n="phase2Title">App Store Lansmanı & BYOK</h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="phase2Desc">
+                Global lansman hazırlıkları, bulut zekası ve macOS Companion kararlılık optimizasyonları.
+              </p>
+              
+              <ul class="space-y-3 text-xs text-slate-300 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="zap" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span>App Store Genel Yayını (Son İnceleme Aşamasında)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="zap" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span>Gemini 3.5 Flash Lite BYOK (Kendi API Anahtarın)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="zap" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span>macOS Companion Kablosuz Ekran Akışı</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="zap" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+                  <span>Topluluk Öneri & Geri Bildirim Portalı</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Zamanlama</span>
+              <span class="text-blue-400 font-semibold">2026 Q4 (Şimdi)</span>
+            </div>
+          </div>
+
+          <!-- Phase 3: Planned -->
+          <div class="glass-panel p-6 rounded-3xl border-slate-800/80 flex flex-col justify-between relative group hover:border-purple-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-400 text-xs font-mono font-semibold">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                <span data-i18n="phase3Status">PLANLANDI</span>
+              </span>
+            </div>
+            <div>
+              <div class="text-purple-400 font-mono text-xs tracking-wider uppercase mt-2 mb-1" data-i18n="phase3Num">FAZ 03</div>
+              <h3 class="text-lg font-bold font-heading text-white mb-2" data-i18n="phase3Title">Oyun Senaryo Paketleri & 0ms</h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="phase3Desc">
+                AAA oyunlar için el yapımı profesyonel diyalog indeksleri ve sıfır milisaniye tanıma devrimi.
+              </p>
+              
+              <ul class="space-y-3 text-xs text-slate-300 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Özel Oyun Senaryo Paketleri (GTA VI, Witcher 3, Cyberpunk)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>0 ms Anlık Tanıma: Ekranda çıktığı an milisaniyede eşleşme</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Kullanıcı Sözlük Paylaşım Topluluğu (Community Workshop)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Diyalog Konuşmacı Ayrımı (Speaker Diarization)</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Zamanlama</span>
+              <span class="text-purple-400 font-semibold">2027 Q1</span>
+            </div>
+          </div>
+
+          <!-- Phase 4: Future Vision -->
+          <div class="glass-panel p-6 rounded-3xl border-slate-800/80 flex flex-col justify-between relative group hover:border-amber-500/40 transition-all duration-300">
+            <div class="absolute -top-3 left-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-mono font-semibold">
+                <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                <span data-i18n="phase4Status">GELECEK VİZYONU</span>
+              </span>
+            </div>
+            <div>
+              <div class="text-amber-400 font-mono text-xs tracking-wider uppercase mt-2 mb-1" data-i18n="phase4Num">FAZ 04</div>
+              <h3 class="text-lg font-bold font-heading text-white mb-2" data-i18n="phase4Title">Stüdyo Dublaj & Çoklu Platform</h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="phase4Desc">
+                Önceden kaydedilmiş aktör kalitesinde seslendirme paketleri ve Windows/Android desteği.
+              </p>
+              
+              <ul class="space-y-3 text-xs text-slate-300 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="mic" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Önceden Derlenmiş Oyun Stüdyo Dublaj Paketleri</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="mic" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Windows PC Companion Desteği (Ultra-Low Latency)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="mic" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Android Erken Erişim & NPU Adaptasyonu</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="mic" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Apple Vision Pro Uzamsal HUD Entegrasyonu</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Zamanlama</span>
+              <span class="text-amber-400 font-semibold">2027 Q2 - Q3</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRO GAMING SETUP TIPS SECTION -->
+    <section id="setup-tips" class="py-24 relative border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+            <i data-lucide="gamepad-2" class="w-3.5 h-3.5"></i>
+            <span data-i18n="setupTipsBadge">PRO GAMER REHBERİ</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4" data-i18n="setupTipsTitle">
+            Mükemmel Deneyim İçin Tavsiyeler
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg" data-i18n="setupTipsSubtitle">
+            MR.Lens'i en yüksek hassasiyet, sıfır sarsıntı ve sinematik sesle kullanmak için uzman ipuçları.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Tip 1 -->
+          <div class="glass-panel p-8 rounded-3xl relative border-slate-800/80 hover:border-blue-500/40 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="maximize-2" class="w-6 h-6"></i>
+            </div>
+            <div class="text-xs font-mono text-blue-400 font-semibold tracking-wider uppercase mb-2">01. ERGONOMİ & SABİTLEME</div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="tip1Title">İdeal Mesafe & Açı</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="tip1Desc">
+              iPhone'unuzu TV veya monitörden <strong>1.0 - 2.5 metre</strong> mesafede, ekranın altyazı alanına hafif yukarı açıyla konumlandırın. Küçük bir masa tripodu veya MagSafe standı sıfır sarsıntı ve kesintisiz 18 FPS takip sağlar.
+            </p>
+          </div>
+
+          <!-- Tip 2 -->
+          <div class="glass-panel p-8 rounded-3xl relative border-slate-800/80 hover:border-purple-500/40 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/15 border border-purple-500/30 text-purple-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="headphones" class="w-6 h-6"></i>
+            </div>
+            <div class="text-xs font-mono text-purple-400 font-semibold tracking-wider uppercase mb-2">02. ÇİFT KANALLI SES</div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="tip2Title">AirPods & Sinematik Dublaj</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="tip2Desc">
+              AirPods veya düşük gecikmeli Bluetooth kulaklık takarak sesli dublajı aktifleştirin. Oyunun müzik ve patlama sesleri TV hoparlörünüzden gelirken, Türkçe karakter dublajı kulağınıza anında ve kristal netliğinde fısıldanır.
+            </p>
+          </div>
+
+          <!-- Tip 3 -->
+          <div class="glass-panel p-8 rounded-3xl relative border-slate-800/80 hover:border-emerald-500/40 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <div class="text-xs font-mono text-emerald-400 font-semibold tracking-wider uppercase mb-2">03. KONTRAST & LOŞ IŞIK</div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3" data-i18n="tip3Title">OLED & Işık Optimizasyonu</h3>
+            <p class="text-slate-400 text-sm leading-relaxed" data-i18n="tip3Desc">
+              Odanızda ekrana doğrudan vuran parlak avize ışıklarını engelleyin. MR.Lens'in <strong>HDR Adaptif Pozlama</strong> algoritması, en karanlık zindan sahnelerinde veya parlak neon cyberpunk sokaklarında bile altyazıyı net yakalar.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Banner Info Callout -->
+        <div class="mt-12 glass-panel p-6 sm:p-8 rounded-3xl border-slate-800/90 flex flex-col sm:flex-row items-center justify-between gap-6 bg-gradient-to-r from-blue-950/20 via-slate-900/60 to-purple-950/20">
+          <div class="flex items-center gap-4 text-left">
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-500/30 text-blue-400 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-base font-heading" data-i18n="setupCalloutTitle">Kablo Yok, Konsol Modu Yok, Ban Riski Sıfır</h4>
+              <p class="text-slate-400 text-xs sm:text-sm mt-0.5" data-i18n="setupCalloutDesc">MR.Lens konsolunuzun veya PC'nizin hiçbir dosyasına müdahale etmez; optik kamera ve yapay zeka ile %100 harici çalışır.</p>
+            </div>
+          </div>
+          <a href="#download" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-md shadow-blue-500/20 shrink-0 flex items-center gap-2">
+            <span data-i18n="setupCalloutBtn">Erken Erişime Katıl</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 relative bg-slate-950/70 border-t border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- FAQ Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold mb-4">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+            <span>MERAK EDİLEN HER ŞEY</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4" data-i18n="faqTitle">
+            Sıkça Sorulan Sorular
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            MR.Lens'in donanım entegrasyonu, 18 FPS ANE mimarisi, çevrimdışı motoru, gizlilik ve dublaj teknolojisi hakkında tüm detaylar.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+            <button onclick="filterFaq('all')" data-filter="all" class="faq-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-500/25 border border-blue-400/40">
+              Tümü (14)
+            </button>
+            <button onclick="filterFaq('hardware')" data-filter="hardware" class="faq-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🎮 Konsol & Donanım (4)
+            </button>
+            <button onclick="filterFaq('performance')" data-filter="performance" class="faq-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              ⚡ Hız & Teknoloji (3)
+            </button>
+            <button onclick="filterFaq('translation')" data-filter="translation" class="faq-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🧠 Çeviri & Dublaj (4)
+            </button>
+            <button onclick="filterFaq('privacy')" data-filter="privacy" class="faq-filter-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60">
+              🔒 Gizlilik & BYOK (3)
+            </button>
+          </div>
+        </div>
+
+        <!-- 14 Detailed Accordion Items -->
+        <div class="space-y-3.5" id="faq-accordion-container">
+          
+          <!-- Q1 (Hardware) -->
+          <div id="faq-item-1" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="hardware" onclick="toggleFaq(1)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">DONANIM</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">PlayStation 5, Xbox veya Nintendo Switch ile kullanırken kablo, Elgato veya kart gerekir mi?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-1" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">Kesinlikle hayır!</strong> MR.Lens sıfır kablo ve sıfır donanım kurulumu felsefesiyle tasarlanmıştır. Konsolunuza herhangi bir yazılım kurmanıza, HDMI ayırıcı veya pahalı capture card'lar (Elgato vb.) satın almanıza gerek yoktur. iPhone'unuzu televizyonunuzun veya monitörünüzün karşısına koyup kamerasını alttaki altyazı alanına doğrultmanız yeterlidir.
+            </div>
+          </div>
+
+          <!-- Q2 (Hardware) -->
+          <div id="faq-item-2" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="hardware" onclick="toggleFaq(2)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">KURULUM</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Telefonumu ekranın karşısına nasıl konumlandırmalıyım? Özel bir açı gerekir mi?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-2" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              Masanızın üzerindeki küçük bir telefon standı, sehpa veya ucuz bir telefon tutacağı/tripod fazlasıyla yeterlidir. MR.Lens'in Kamera 2 (Kokpit) modunda yer alan <strong class="text-white">1:1 donanım ROI (Region of Interest) projeksiyon algoritması</strong> sayesinde telefonun ekrana tam dik bakması şart değildir; hafif açılı ve mesafeli duruşları otomatik kompanse ederek doğrudan televizyonun altyazı şeridine kilitlenir.
+            </div>
+          </div>
+
+          <!-- Q3 (Hardware) -->
+          <div id="faq-item-3" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="hardware" onclick="toggleFaq(3)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">UYUMLULUK</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Hangi iPhone modelleri destekleniyor ve sistem gereksinimi nedir?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-3" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              MR.Lens, <strong class="text-white">iOS 17.0 ve üzeri</strong> tüm iPhone modellerinde kusursuz çalışır. 18 FPS donanımsal ANE hızlandırması ve çevrimdışı Apple NPU çevirisi için Apple Neural Engine içeren iPhone 11 ve üzeri (önerilen: iPhone 13, 14, 15 ve 16 serisi) en yüksek hızı ve pil verimliliğini sunar.
+            </div>
+          </div>
+
+          <!-- Q4 (Hardware) -->
+          <div id="faq-item-4" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="hardware" onclick="toggleFaq(4)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">PC / MAC</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">PC veya Mac oyunlarında nasıl kullanılır? Monitörde oynarken oyun kapanır mı?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-4" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-4" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              İki farklı yöntemle kullanabilirsiniz: 1) Telefonunuzu masadaki monitörün altyazı alanına doğrultarak klasik şekilde, 2) MR.Lens'in yerleşik <strong class="text-white">Mac Screen Streaming (Remote Companion)</strong> özelliği sayesinde bilgisayar ekranınızın görüntüsünü kablosuz olarak telefona aktarıp doğrudan stream üzerinden çevirerek. Kamera 2 Kokpit modumuz altyazıları telefonun altındaki şık HUD kartlarında gösterdiğinden ana oyun monitörünüzün aksiyonunu asla kapatmaz.
+            </div>
+          </div>
+
+          <!-- Q5 (Performance) -->
+          <div id="faq-item-5" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="performance" onclick="toggleFaq(5)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">18 FPS OCR</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">"18 FPS Turbo Vision OCR" tam olarak nedir ve diğer çeviricilerden farkı ne?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-5" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-5" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              Geleneksel ekran çeviriciler saniyede sadece 1 veya 2 kare tarama yapabilir; bu da altyazıların 2-3 saniye geriden gelmesine ve oyunun ritminin bozulmasına sebep olur. MR.Lens, Apple Silicon Neural Engine (ANE) üzerinde koşan özel <code class="text-emerald-400 font-mono">FastVisionOCRService</code> ve piksel delta filtresi (<code class="text-emerald-400 font-mono">PixelDeltaGatekeeper</code>) sayesinde saniyede <strong class="text-white">18 defaya kadar (0.056 saniye aralıkla)</strong> dinamik tarama yapar. Altyazı ekranda belirdiği an 11-15 milisaniyede yakalanır.
+            </div>
+          </div>
+
+          <!-- Q6 (Performance) -->
+          <div id="faq-item-6" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="performance" onclick="toggleFaq(6)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">TEK KELİME</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Hızlı diyaloglarda tek kelimelik ani bağırışlar ("Run!", "No!", "Fire!") kaçar mı?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-6" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-6" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">Asla kaçmaz!</strong> v0.89 ve v0.90 güncellemeleriyle eklediğimiz adaptif 35-55 ms debounce ve 1 FPS heartbeat (kalp atışı) sistemi sayesinde saliselik "No.", "Run.", "Look out!" gibi anlık diyaloglar bile sıfır gecikmeyle yakalanır, sözlükten Türkçe karşılığı ("Kaç!", "Hayır!", "Dikkat et!") anında HUD kartına basılır.
+            </div>
+          </div>
+
+          <!-- Q7 (Performance) -->
+          <div id="faq-item-7" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="performance" onclick="toggleFaq(7)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">MODLAR</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Kamera 1 (Tam Ekran) ile Kamera 2 (Kokpit HUD) modları arasındaki fark nedir?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-7" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-7" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">Kamera 1 (Tam Ekran Bindirme):</strong> Kameranın gördüğü televizyon görüntüsünün üzerine doğrudan artırılmış gerçeklik (AR) kutucuklarıyla çeviriyi yerleştirir.<br>
+              <strong class="text-white">Kamera 2 (Kokpit HUD Modu):</strong> Oyuncuların en çok tercih ettiği moddur. Ekranı ikiye böler; üstte TV'nin altyazı alanı 1:1 netlikle izlenirken, altta oyun atmosferini ve görüş alanını engellemeyen şık, yarı saydam, ses dalgası destekli HUD bilgi kartları akar.
+            </div>
+          </div>
+
+          <!-- Q8 (Translation) -->
+          <div id="faq-item-8" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="translation" onclick="toggleFaq(8)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">İNTERNETSİZ</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">MR.Lens internet bağlantım yokken (çevrimdışı) çalışabilir mi?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-8" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-8" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">Evet!</strong> MR.Lens'in kalbinde yer alan 1 Milyondan fazla oyun terimli yerel SQLite sözlüğü (<code class="text-purple-400 font-mono">FastPathLexiconService</code>) ve <strong class="text-white">Apple Neural Engine (NPU)</strong> çeviri motoru tamamen cihazınızda internetsiz çalışır. Dağ evinde, uçakta veya internetiniz kesildiğinde bile sıfır gecikmeyle (%100 offline) oyun oynamaya devam edebilirsiniz.
+            </div>
+          </div>
+
+          <!-- Q9 (Translation) -->
+          <div id="faq-item-9" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="translation" onclick="toggleFaq(9)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">OYUN JARGONU</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Oyunlara özgü jargon, evren terimleri (lore) ve argo doğru çevriliyor mu?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-9" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-9" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              Geleneksel çeviri araçları (Google Çeviri vb.) oyun terimlerini günlük kelime gibi çevirerek komik hatalar yapar (örneğin Cyberpunk'taki "Fixer" kelimesini "tamirci" olarak çevirmek gibi). MR.Lens, <strong class="text-white">1 Milyondan fazla oyun diyaloğunu, RPG terimlerini ve oyun argosunu</strong> içeren özel bir sözlük katmanına sahiptir. GTA, Cyberpunk, Witcher, Souls-like veya God of War gibi yapımlardaki terimler bağlamına sadık kalarak Türkçeleştirilir.
+            </div>
+          </div>
+
+          <!-- Q10 (Translation) -->
+          <div id="faq-item-10" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="translation" onclick="toggleFaq(10)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">DUBLAJ</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Yapay zeka sesli dublajı nasıl çalışır ve kulaklıkla dinleyebilir miyim?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-10" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-10" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              MR.Lens, ekrandaki konuşmacının ses tonunu ve frekansını (akustik analiz) arka planda yakalayarak uygun erkek veya kadın ses tonunu otomatik belirler. AirPods veya herhangi bir Bluetooth kulaklığınızı iPhone'unuza bağladığınızda, TV'den gelen patlama ve silah seslerini duyarken aynı anda kulağınıza <strong class="text-white">eşzamanlı Türkçe sesli dublaj</strong> gelir!
+            </div>
+          </div>
+
+          <!-- Q11 (Translation) -->
+          <div id="faq-item-11" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="translation" onclick="toggleFaq(11)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">DİLLER</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Hangi oyun kaynak dillerini destekliyor?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-11" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-11" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              MR.Lens, dünya üzerindeki konsol ve PC oyunlarının %99'unu kapsayan <strong class="text-white">10 ana dili</strong> yerleşik olarak destekler: İngilizce (🇺🇸), Japonca (🇯🇵 - Kanji/Kana boşluksuz karakter koruması), Almanca (🇩🇪), Fransızca (🇫🇷), İspanyolca (🇪🇸), İtalyanca (🇮🇹), Rusça (🇷🇺), Korece (🇰🇷) ve Çince (🇨🇳).
+            </div>
+          </div>
+
+          <!-- Q12 (Privacy) -->
+          <div id="faq-item-12" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="privacy" onclick="toggleFaq(12)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">GİZLİLİK</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Televizyonumun veya odamın kamera görüntüsü bir sunucuya kaydediliyor mu?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-12" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-12" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">%100 HAYIR.</strong> MR.Lens gizlilik odaklı (Privacy-First) tasarlanmıştır. Kamera görüntüleri iPhone'unuzun geçici RAM belleğinde işlenir, OCR altyazı metnini çıkardığı milisaniyede görsel anında bellekten silinir. Ne televizyonunuzun görüntüsü, ne eviniz ne de kişisel verileriniz hiçbir sunucuya yüklenmez, satılmaz veya depolanmaz.
+            </div>
+          </div>
+
+          <!-- Q13 (Privacy) -->
+          <div id="faq-item-13" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="privacy" onclick="toggleFaq(13)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">BYOK & ÜCRET</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">Gemini API veya ElevenLabs anahtarı (BYOK) zorunlu mu? Ücret ödemem gerekir mi?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-13" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-13" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">Hayır, zorunlu değildir!</strong> Uygulamanın 1 Milyonluk yerel sözlüğü ve Apple Neural Engine çevrimdışı motoru tamamen ücretsiz ve sınırsızdır. Kendi API anahtarını ekleme (BYOK - Bring Your Own Key) özelliği; Google Gemini 3.5 Flash Lite veya ElevenLabs stüdyo ses motorunu kendi kotalarıyla sınırsız kullanmak isteyen ileri düzey oyuncular için opsiyonel bir özelliktir.
+            </div>
+          </div>
+
+          <!-- Q14 (Privacy / Roadmap) -->
+          <div id="faq-item-14" class="faq-item glass-panel rounded-2xl p-5 border-slate-800 transition-all duration-300 cursor-pointer" data-category="privacy" onclick="toggleFaq(14)">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">GELECEK</span>
+                <span class="font-semibold text-slate-100 text-sm sm:text-base">"Profesyonel Oyun Senaryo Paketleri" ve hazır ses yamaları gelecek mi?</span>
+              </div>
+              <i data-lucide="chevron-down" id="faq-icon-14" class="w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300"></i>
+            </div>
+            <div id="faq-content-14" class="hidden mt-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+              <strong class="text-white">Evet!</strong> Game Caption gibi uygulamaların sunduğu önceden indekslenmiş oyun senaryosu veritabanları mimarimize eklenmektedir. GTA VI, God of War, Cyberpunk gibi dev yapımların resmi ve topluluk Türkçe altyazı / dublaj paketleri çıktıkça tek tıkla cihaza indirilebilecek; OCR metni gördüğü an <strong class="text-emerald-400">0 ms'de doğrudan stüdyo çevirisi ve ses dosyası</strong> tetiklenecektir.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Help / Contact Support Card -->
+        <div class="mt-12 p-6 sm:p-8 rounded-3xl glass-panel-glow border-blue-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 flex-shrink-0">
+              <i data-lucide="message-square" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-white font-heading">Aklınızda başka bir soru veya oyun önerisi mi var?</h3>
+              <p class="text-xs text-slate-400 mt-1">Geliştirici ekibimize doğrudan yazın veya erken erişim bültenimize katılın.</p>
+            </div>
+          </div>
+          <a href="#download" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-500/30 whitespace-nowrap hover:scale-105 active:scale-95">
+            Bize Ulaşın
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DOWNLOAD & CONTRIBUTE SECTION (2 COLUMNS) -->
+    <section id="download" class="py-24 relative overflow-hidden bg-gradient-to-b from-[#060913] via-[#090D1A] to-[#04060D] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold mb-4">
+            <i data-lucide="users" class="w-3.5 h-3.5"></i>
+            <span>TOPLULUK & ERKEN ERİŞİM</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight mb-4">
+            MR.Lens Deneyimine Katılın & Şekillendirin
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            İster erken erişimle ilk deneyimleyenlerden olun, ister geliştirme sürecine önerilerinizle doğrudan yön verin.
+          </p>
+        </div>
+
+        <!-- 2 Columns Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- LEFT COLUMN: Early Access Application -->
+          <div class="glass-panel-glow p-8 sm:p-10 rounded-3xl border-blue-500/40 flex flex-col justify-between relative group hover:border-blue-500/70 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shadow-lg shadow-blue-500/10">
+                  <i data-lucide="rocket" class="w-7 h-7"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold font-mono tracking-wider bg-blue-500/10 text-blue-300 border border-blue-500/30">
+                  TESTFLIGHT BETA
+                </span>
+              </div>
+
+              <h3 class="text-2xl font-bold font-heading text-white mb-3">Erken Erişim Başvurusu</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                App Store genel yayınından önce TestFlight beta programına katılın. Yeni oyun motorlarını, 18 FPS Turbo Vision'ı ve stüdyo dublajını ilk siz test edin.
+              </p>
+
+              <!-- Early Access Form -->
+              <form onsubmit="handleNewsletterSubmit(event)" class="space-y-3 mb-6">
+                <div class="flex flex-col sm:flex-row gap-2.5">
+                  <input type="email" id="newsletter-email" required placeholder="E-posta adresinizi girin..." data-i18n-placeholder="footerEmailPlaceholder" class="w-full px-4 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner">
+                  <button type="submit" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-600/30 whitespace-nowrap hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                    <span>Kayıt Ol</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Release Status Info Bar -->
+            <div class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+              <span>🛡️ Uygulama App Store'da yayınlanmak üzere son inceleme ve geliştirme aşamasındadır.</span>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Contribute to Development -->
+          <div class="glass-panel-glow p-8 sm:p-10 rounded-3xl border-purple-500/40 flex flex-col justify-between relative group hover:border-purple-500/70 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/40 flex items-center justify-center text-purple-400 shadow-lg shadow-purple-500/10">
+                  <i data-lucide="sparkles" class="w-7 h-7"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold font-mono tracking-wider bg-purple-500/10 text-purple-300 border border-purple-500/30">
+                  TOPLULUK KATKISI
+                </span>
+              </div>
+
+              <h3 class="text-2xl font-bold font-heading text-white mb-3">Geliştirme Sürecine Katkıda Bulunun</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                MR.Lens'te görmek istediğiniz özellikleri, yeni oyun desteği taleplerinizi veya platform fikirlerinizi (iOS, Android, macOS, Windows) doğrudan geliştirici ekibine iletin.
+              </p>
+
+              <!-- Quick Email Input and Direct Form Action -->
+              <div class="space-y-3 mb-6">
+                <div class="flex flex-col sm:flex-row gap-2.5">
+                  <input type="email" id="contribute-quick-email" placeholder="E-posta adresiniz (isteğe bağlı)..." class="w-full px-4 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500 transition-colors shadow-inner">
+                  <button onclick="openContributeModal(document.getElementById('contribute-quick-email').value)" type="button" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-lg shadow-purple-600/30 whitespace-nowrap hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                    <i data-lucide="file-edit" class="w-4 h-4"></i>
+                    <span>Öneri Formunu Aç</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email target info bar -->
+            <div class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-purple-300 text-xs font-medium">
+              <i data-lucide="mail" class="w-4 h-4 text-purple-400 flex-shrink-0"></i>
+              <span>Önerileriniz doğrudan <strong class="text-white font-mono">mrlensapp@gmail.com</strong> adresine iletilecektir.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 border-t border-slate-800/80 bg-[#04060D] text-xs text-slate-500 text-center">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-slate-300 font-heading">MR.Lens</span>
+          <span>•</span>
+          <span data-i18n="footerCopy">© 2026 MR.Lens. Tüm hakları saklıdır. Konsol ve PC oyuncuları için tutkuyla geliştirildi.</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#features" class="hover:text-slate-400 transition-colors">Özellikler</a>
+          <a href="#faq" class="hover:text-slate-400 transition-colors">Destek</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- DEDICATED IN-PAGE CONTRIBUTE & FEEDBACK MODAL -->
+  <div id="contribute-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-2xl p-4 sm:p-6 overflow-y-auto" onclick="closeContributeModal()">
+    <div class="relative max-w-2xl w-full bg-slate-900/95 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl my-8" onclick="event.stopPropagation()">
+      
+      <!-- Modal Header -->
+      <div class="p-6 sm:p-8 border-b border-slate-800 bg-slate-950/80 flex items-center justify-between">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-purple-600/20 border border-purple-500/40 flex items-center justify-center text-purple-400 shadow-md flex-shrink-0">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold text-white font-heading">MR.Lens Geliştirme Katkı Formu</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Mesajınız doğrudan <span class="text-purple-400 font-mono font-semibold">mrlensapp@gmail.com</span> adresine iletilecektir.</p>
+          </div>
+        </div>
+        <button onclick="closeContributeModal()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Form Area -->
+      <div id="contrib-form-area" class="p-6 sm:p-8 space-y-6">
+        <form onsubmit="handleContributeSubmit(event)" class="space-y-5">
+          <input type="hidden" id="contrib-platform-input" value="Hepsi (Tüm Platformlar)">
+
+          <!-- Name & Surname Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Adınız *</label>
+              <input type="text" id="contrib-name" required placeholder="Adınız" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Soyadınız *</label>
+              <input type="text" id="contrib-surname" required placeholder="Soyadınız" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner">
+            </div>
+          </div>
+
+          <!-- Email & Phone Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">E-posta Adresiniz *</label>
+              <input type="email" id="contrib-email" required placeholder="ornek@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Telefon Numaranız (Opsiyonel)</label>
+              <input type="tel" id="contrib-phone" placeholder="05XX XXX XX XX" class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors shadow-inner">
+            </div>
+          </div>
+
+          <!-- Platform Selector (iOS, Android, macOS, Windows, Hepsi) -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">Hangi Platform İçin Öneri Sunuyorsunuz? *</label>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="selectPlatform('iOS')" data-platform="iOS" class="platform-pill-btn px-3.5 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/90 hover:bg-slate-700/90 text-slate-300 border border-slate-700/60">
+                📱 iOS (iPhone / iPad)
+              </button>
+              <button type="button" onclick="selectPlatform('Android')" data-platform="Android" class="platform-pill-btn px-3.5 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/90 hover:bg-slate-700/90 text-slate-300 border border-slate-700/60">
+                🤖 Android
+              </button>
+              <button type="button" onclick="selectPlatform('macOS')" data-platform="macOS" class="platform-pill-btn px-3.5 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/90 hover:bg-slate-700/90 text-slate-300 border border-slate-700/60">
+                💻 macOS (Companion)
+              </button>
+              <button type="button" onclick="selectPlatform('Windows')" data-platform="Windows" class="platform-pill-btn px-3.5 py-2 rounded-xl text-xs font-medium transition-all bg-slate-800/90 hover:bg-slate-700/90 text-slate-300 border border-slate-700/60">
+                🪟 Windows PC
+              </button>
+              <button type="button" onclick="selectPlatform('Hepsi (Tüm Platformlar)')" data-platform="Hepsi (Tüm Platformlar)" class="platform-pill-btn px-3.5 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-500/30 border border-blue-400/50 scale-105">
+                🌐 Hepsi (Tüm Platformlar)
+              </button>
+            </div>
+          </div>
+
+          <!-- Feedback & Idea Textarea -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Öneriniz, Fikriniz veya İstediğiniz Özellik *</label>
+            <textarea id="contrib-message" rows="4" required placeholder="Görmek istediğiniz oyun desteği, dublaj sesi, arayüz iyileştirmesi veya genel fikirleriniz..." class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none shadow-inner"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span class="text-xs text-slate-500 flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Bilgileriniz gizli tutulur.
+            </span>
+            <button type="submit" id="contrib-submit-btn" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-sm transition-all shadow-lg shadow-purple-600/30 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Öneriyi Gönder (mrlensapp@gmail.com)</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Confirmation Area -->
+      <div id="contrib-success-area" class="hidden p-8 sm:p-12 text-center space-y-6">
+        <div class="w-20 h-20 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/10">
+          <i data-lucide="check" class="w-10 h-10"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold font-heading text-white">Harika! Öneriniz Alındı</h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-md mx-auto">
+            Teşekkürler <span id="contrib-success-name" class="text-white font-semibold font-heading"></span>! Fikriniz ve geri bildiriminiz doğrudan <span class="text-purple-400 font-mono font-semibold">mrlensapp@gmail.com</span> adresine iletildi.
+          </p>
+        </div>
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a id="contrib-mailto-fallback" href="#" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-colors">
+            <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+            <span>E-posta İstemcinizle Açın</span>
+          </a>
+          <button onclick="closeContributeModal()" class="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-md shadow-blue-600/30">
+            Tamam
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lightbox Fullscreen Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-2xl p-4 sm:p-8" onclick="closeLightbox()">
+    <div class="relative max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      <div class="relative aspect-[16/9] w-full bg-black">
+        <img id="lightbox-img" src="" alt="Setup Detail" class="w-full h-full object-contain">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/20 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 bg-slate-950 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-slate-800">
+        <div>
+          <h4 id="lightbox-title" class="text-lg font-bold text-white font-heading">Setup</h4>
+          <p id="lightbox-subtitle" class="text-sm text-slate-400 font-mono mt-1">Subtitle</p>
+        </div>
+        <button onclick="closeLightbox()" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold self-start sm:self-auto transition-colors">
+          Kapat (ESC)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 px-5 py-3.5 rounded-2xl bg-emerald-600 text-white text-sm font-semibold shadow-2xl shadow-emerald-500/40 border border-emerald-400/40 flex items-center gap-3">
+    <span>Bildirim mesajı</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
