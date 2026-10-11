@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-10-11T12:00:00Z",
+  "packages": [
+    {
+      "id": "gta_6_extended_look",
+      "title": "GTA 6 EL (Extended Look)",
+      "tagline": "Rockstar Games 27 Dakikalık Resmi Oynanış & Extended Gameplay Altyazıları",
+      "badge": "EXTENDED LOOK",
+      "version": "v1.0.0",
+      "sizeMB": 0.12,
+      "subtitleCount": 467,
+      "file": "gta6_el_package.json",
+      "downloadUrl": "https://sahin1705.github.io/mrlens-web/assets/packages/gta6_el_package.json"
+    },
+    {
+      "id": "gta_5_full_story",
+      "title": "Grand Theft Auto V",
+      "tagline": "Michael, Franklin, Trevor, Lamar & TTS Cinsiyet Destekli ([E]/[K]) 160.000+ Tam Senaryo Külliyatı",
+      "badge": "FULL STORY",
+      "version": "v1.2.0",
+      "sizeMB": 50.76,
+      "subtitleCount": 164108,
+      "file": "gtav_full_package.json",
+      "downloadUrl": "https://sahin1705.github.io/mrlens-web/assets/packages/gtav_full_package.json"
+    }
+  ]
+}

@@ -1,0 +1,3703 @@
+{
+  "package_id": "gta6_el_v1",
+  "game_id": "gta_6_extended_look",
+  "name": "Grand Theft Auto VI: Extended Look",
+  "version": "1.0.0",
+  "author": "MR.Lens Pro Localization Team",
+  "target_language": "tr",
+  "source_language": "en",
+  "dialogue_count": 467,
+  "size_mb": 0.12,
+  "description": "Rockstar Games resmi 27 dakikalık Grand Theft Auto VI: Extended Look videosundaki (tJbzMqJGH4k) eksiksiz 467 repliği içerir. Mahalle girişi, uyuşturucu evi SWAT baskını, Méndez takibi, motel odası, Brian & Lori buluşması, Raul Bautista çatışması, Bayside bagaj yayını, Valentina brifingi ve Cal Hampton gün batımı monoloğu.",
+  "created_at": "2026-10-11",
+  "entries": [
+    {
+      "timestamp": "00:04",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yo! Crackheads! Woo!",
+      "translatedText": "Hey! Keşler! Vay canına!",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:08",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I guess they know we’re coming.",
+      "translatedText": "Sanırım geldiğimizi biliyorlar.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:10",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Alright, that’s the block right here.",
+      "translatedText": "Tamam, sokak tam burası.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:12",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Be cool, don’t... you know.",
+      "translatedText": "Sakin ol, şey yapma... bilirsin işte.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:15",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What?",
+      "translatedText": "Ne?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:15",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Err, nothing.",
+      "translatedText": "Şey, boş ver.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:18",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yo, what the fuck?",
+      "translatedText": "O da ne lan öyle?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:20",
+      "speaker": "Sokak Genci",
+      "speakerGender": "[E]",
+      "originalText": "Yo, what's up? Y’all tryna smoke?",
+      "translatedText": "Naber beyler? Bir şeyler yakmak ister misiniz?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:23",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "No. Y’all know Boobie?",
+      "translatedText": "Yok. Siz Boobie'yi tanır mısınız?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:26",
+      "speaker": "Sokak Genci",
+      "speakerGender": "[E]",
+      "originalText": "Boobie, huh? Yeah, he ain’t here, though.",
+      "translatedText": "Boobie mi? Evet, ama burada değil.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:30",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Well, we're picking something up for him.",
+      "translatedText": "Onun adına emaneti almaya geldik.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:32",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "You know anything about that?",
+      "translatedText": "Bu konuda bilgin var mı?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:37",
+      "speaker": "Sokak Genci",
+      "speakerGender": "[E]",
+      "originalText": "Yeah. Go inside and ask for Raymond, bruh.",
+      "translatedText": "Evet. İçeri gir ve Raymond'u sor birader.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:39",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Appreciate it.",
+      "translatedText": "Eyvallah dostum.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:49",
+      "speaker": "Mahalle Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Like, might have to fuck around and shake some shit, know I’m saying?",
+      "translatedText": "Yani biraz ortalığı karıştırıp ses getirmemiz gerekecek, anlıyor musun?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:54",
+      "speaker": "Mahalle Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Eh, fo sho. Yeah, yeah. Mmm hmm.",
+      "translatedText": "Aynen öyle. Aynen, aynen. Hı-hım.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "00:58",
+      "speaker": "Mahalle Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Man... I don't even wanna hear that shit.",
+      "translatedText": "Dostum... Bu saçmalıkları duymak bile istemiyorum.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:00",
+      "speaker": "Mahalle Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Hey. - Man... I don't even wanna hear that shit.",
+      "translatedText": "Hey. - Bu saçmalıkları duymak bile istemiyorum.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:01",
+      "speaker": "Mahalle Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Hey. - Like, I don't even wanna hear that shit.",
+      "translatedText": "Hey. - Yani bu saçmalığı duymak bile istemiyorum.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:01",
+      "speaker": "Mahalle Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Like, I don't even wanna hear that shit.",
+      "translatedText": "Yani bu saçmalığı duymak bile istemiyorum.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:04",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Hold up, bruh.",
+      "translatedText": "Bir dakika dur birader.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:05",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Yo. Ya’ll need something?",
+      "translatedText": "Selam. Bir şeye mi baktınız?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:08",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Raymond?",
+      "translatedText": "Raymond buralarda mı?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:09",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Nah. Whatchu want?",
+      "translatedText": "Yok. Ne istiyordunuz?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:11",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Boobie sent us for a pickup.",
+      "translatedText": "Boobie bizi emaneti almamız için yolladı.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:14",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Aight, aight.",
+      "translatedText": "Tamam, tamam.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:15",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Yo! We going up.",
+      "translatedText": "Hey! Yukarı çıkıyoruz.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:21",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Right inside.",
+      "translatedText": "Hemen içeride.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:36",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "You said you was here for a pickup or a drop off?",
+      "translatedText": "Emanet almaya mı geldiniz yoksa mal bırakmaya mı dediniz?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:39",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Pick up.",
+      "translatedText": "Emaneti almaya.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:48",
+      "speaker": "Nöbetçi",
+      "speakerGender": "[E]",
+      "originalText": "Straight up, first door on the right.",
+      "translatedText": "Dümdüz git, sağdaki ilk kapı.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:50",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Yep.",
+      "translatedText": "Tamamdır.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "01:59",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "How you doing, big guy?",
+      "translatedText": "Naber bakalım koca adam?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "02:01",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Buddy...",
+      "translatedText": "Koçum benim...",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "02:12",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "This has gotta be the door, right?",
+      "translatedText": "Kapı bu olmalı, değil mi?",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "02:13",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Looks like it.",
+      "translatedText": "Öyle görünüyor.",
+      "scene": "Mahalle Girişi & Sokak Köşesi"
+    },
+    {
+      "timestamp": "02:21",
+      "speaker": "Kapı Nöbetçisi",
+      "speakerGender": "[E]",
+      "originalText": "What you want?",
+      "translatedText": "Ne istiyorsunuz?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:22",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yo, is Raymond around?",
+      "translatedText": "Selam, Raymond buralarda mı?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:23",
+      "speaker": "Kapı Nöbetçisi",
+      "speakerGender": "[E]",
+      "originalText": "Nah, never heard of him.",
+      "translatedText": "Yok, öyle birini hiç duymadım.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:26",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yo, we’re here to pick up. For Boobie.",
+      "translatedText": "Selam, emaneti almaya geldik. Boobie için.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:30",
+      "speaker": "Kapı Nöbetçisi",
+      "speakerGender": "[E]",
+      "originalText": "Aight, hold up.",
+      "translatedText": "Tamam, bekleyin bir.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:38",
+      "speaker": "Kapı Nöbetçisi",
+      "speakerGender": "[E]",
+      "originalText": "Yo, Ray! These two say they’re for Boobie.",
+      "translatedText": "Hey Ray! Bu ikisi Boobie'nin adamı olduklarını söylüyor.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:40",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "I already told that motherfucker what the fuck going on, man.",
+      "translatedText": "O orospu çocuğuna neler döndüğünü zaten anlattım dostum!",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:44",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "He seriously sent y’all over here right now?",
+      "translatedText": "Cidden sizi şu anda buraya mı gönderdi?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:46",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "We’re just here to collect, man.",
+      "translatedText": "Biz sadece tahsilata geldik dostum.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:47",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Why he ain’t come to collect?",
+      "translatedText": "Kendi niye toplamaya gelmedi peki?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:49",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "You ain’t ask yourselves that?",
+      "translatedText": "Bunu kendinize hiç sormadınız mı?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:51",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "No.",
+      "translatedText": "Hayır.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:52",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Look, we could go back empty handed.",
+      "translatedText": "Bakın, elimiz boş da dönebiliriz.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:55",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "My partner's off the grid right now, you feel me?",
+      "translatedText": "Ortağım şu an sırra kadem bastı, anlıyor musun beni?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "02:58",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Until I figure out where the fuck he at and what the fuck going on",
+      "translatedText": "Onun hangi cehennemde olduğunu ve neler döndüğünü öğrenene kadar",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:02",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "we in a holding pattern right here.",
+      "translatedText": "burada beklemeye geçmiş durumdayız.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:03",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "So Boobie knows all this, right?",
+      "translatedText": "Yani Boobie bütün bunları biliyor, değil mi?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:05",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, he fucking knows.",
+      "translatedText": "Evet, bal gibi biliyor.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:06",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Problem is he only worried about himself.",
+      "translatedText": "Sorun şu ki herif sadece kendi kıçını düşünüyor.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:12",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Yo, phone.",
+      "translatedText": "Hey, telefon çalıyor.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:15",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Let me tell y’all something, at this point I really don’t give a fuck.",
+      "translatedText": "Size bir şey diyeyim mi, bu saatten sonra zerre sikimde değil.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:20",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Ay, pack that shit up.",
+      "translatedText": "Hey, şu malları toplayın çabuk!",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:22",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Yo Ray, it’s him. Ernesto.",
+      "translatedText": "Hey Ray, arayan o. Ernesto.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:25",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Put it on speakerphone.",
+      "translatedText": "Hoparlöre al.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:26",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "Raymond.",
+      "translatedText": "Raymond.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:26",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Yo, Nesto!",
+      "translatedText": "Söyle Nesto!",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:27",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "Raymond, Raymond.",
+      "translatedText": "Raymond, Raymond.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:28",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Where the fuck you at?",
+      "translatedText": "Hangi cehennemdesin sen?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:29",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "Óyeme, mi hermano, we got a situation happening.",
+      "translatedText": "Beni dinle kardeşim, başımızda büyük bir bela var.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:33",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "Our friends on the task force are on their way.",
+      "translatedText": "Özel timdeki dostlarımız yola çıktı bile.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:35",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "They say they’re paying you a visit so just let them take whatever they want, okay?",
+      "translatedText": "Seni ziyarete geliyorlarmış, ne istiyorlarsa almalarına izin ver, tamam mı?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:39",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "What the fuck you talking about?",
+      "translatedText": "Sen neden bahsediyorsun lan öyle?!",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:42",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "You know I got a nigga outside yo momma house, right?",
+      "translatedText": "Annene ait evin kapısında bir adamımın beklediğini biliyorsun, değil mi?",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:43",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "Raymond, listen very closely, cabrón.",
+      "translatedText": "Raymond, beni çok iyi dinle cabrón.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:48",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Raymond.",
+      "translatedText": "Raymond.",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:49",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "The fuck is that?",
+      "translatedText": "O ses de ne lan?!",
+      "scene": "Raymond İni & Boobie Malı"
+    },
+    {
+      "timestamp": "03:50",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Hey, yo, Ray! It’s twelve! They tooled up and everything!",
+      "translatedText": "Hey Ray! Aynasızlar bastı! Ağır silahlılar, her şeyleri var!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:53",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "Raymond?",
+      "translatedText": "Raymond?",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:53",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Let’s get these workers out of here, man!",
+      "translatedText": "Şu işçileri buradan hemen çıkaralım dostum!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:56",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Ah, shit!",
+      "translatedText": "Kahretsin!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:56",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Wrong way, this way. - Ah, shit!",
+      "translatedText": "Yanlış yol, bu taraftan! - Kahretsin!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:57",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Wrong way, this way.",
+      "translatedText": "Yanlış yol, bu taraftan!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:57",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Come on, come on!",
+      "translatedText": "Hadi, hadi!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "03:58",
+      "speaker": "Çete Üyesi",
+      "speakerGender": "[E]",
+      "originalText": "Move, move!",
+      "translatedText": "Kımıldayın, kımıldayın!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:01",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "I always been there for you.",
+      "translatedText": "Ben her zaman senin arkandaydım.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:04",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "But this what I get?",
+      "translatedText": "Bana layık gördüğün karşılık bu mu lan?",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:06",
+      "speaker": "SWAT Baskın Timi",
+      "speakerGender": "[E]",
+      "originalText": "Police! Don't fucking move!",
+      "translatedText": "Polis! Kıpırdamayın, kımıldayanı vururuz!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:10",
+      "speaker": "Nesto",
+      "speakerGender": "[E]",
+      "originalText": "It is what it is, my friend.",
+      "translatedText": "Kusura bakma dostum, elden gelen bu.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:12",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Holy shit!",
+      "translatedText": "Siktir!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:13",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Stay down!",
+      "translatedText": "Yerde kalın!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:14",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Yeah, I know.",
+      "translatedText": "Biliyorum, farkındayım.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:23",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Come on, we need to find a way out.",
+      "translatedText": "Hadi, buradan bir çıkış yolu bulmalıyız!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:25",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I got Boobie’s bricks.",
+      "translatedText": "Boobie'nin mal paketlerini aldım!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:26",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Fuck Boobie! We gotta get out of this.",
+      "translatedText": "Boobie'nin canı cehenneme! Buradan canlı çıkmalıyız!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:40",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Lu, push up. Stay with me.",
+      "translatedText": "Lu, ileri hamle yap. Yanımdan ayrılma!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:45",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Lu, cover!",
+      "translatedText": "Lu, siper al!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:46",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "On it! - Lu, cover!",
+      "translatedText": "Hallettim! - Lu, siper al!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "04:57",
+      "speaker": "Dedektif Méndez",
+      "speakerGender": "[E]",
+      "originalText": "What the fuck is going on here?!",
+      "translatedText": "Burada neler dönüyor lan öyle?!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:00",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Fuck, it’s him!",
+      "translatedText": "Kahretsin, gelen o!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:02",
+      "speaker": "Dedektif Méndez",
+      "speakerGender": "[E]",
+      "originalText": "Can’t you fucking handle a bunch of street pushers?",
+      "translatedText": "Bir avuç sokak satıcısının hakkından gelemiyor musunuz lan?!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:06",
+      "speaker": "Şüpheli",
+      "speakerGender": "[E]",
+      "originalText": "Hey man, this ain’t even loaded!",
+      "translatedText": "Hey dostum, bunun şarjörü bile dolu değil!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:07",
+      "speaker": "Dedektif Méndez",
+      "speakerGender": "[E]",
+      "originalText": "Aww, too bad!",
+      "translatedText": "Ah ne yazık, çok kötü!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:11",
+      "speaker": "Dedektif Méndez",
+      "speakerGender": "[E]",
+      "originalText": "Clean this shit up!",
+      "translatedText": "Şu pisliği temizleyin!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:15",
+      "speaker": "Dedektif Méndez",
+      "speakerGender": "[E]",
+      "originalText": "It’s fucking Méndez!",
+      "translatedText": "Siktimin Méndez'i bu!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:17",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Yep. You think he saw us?",
+      "translatedText": "Evet. Sence bizi gördü mü?",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:20",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "No. He couldn’t have.",
+      "translatedText": "Hayır. Görmüş olamaz.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:23",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Oh, coño.",
+      "translatedText": "Ah, kahretsin.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:25",
+      "speaker": "Gözcü",
+      "speakerGender": "[E]",
+      "originalText": "Yo, they got more cops coming in from downstairs.",
+      "translatedText": "Hey, alt kattan daha fazla polis geliyor!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:27",
+      "speaker": "Gözcü",
+      "speakerGender": "[E]",
+      "originalText": "Get in here ‘fore they get yo ass!",
+      "translatedText": "Kıçınızı yakalamadan içeri girin çabuk!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:29",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Thanks, man.",
+      "translatedText": "Sağ olasın dostum.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:29",
+      "speaker": "Tee Teyze",
+      "speakerGender": "[K]",
+      "originalText": "Wh- Raymond, what’s going. What the fuck going on?",
+      "translatedText": "Raymond, ne oluyor? Neler dönüyor burada lan?",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:33",
+      "speaker": "Tee Teyze",
+      "speakerGender": "[K]",
+      "originalText": "What the fuck y’all doing in here?",
+      "translatedText": "Siz ne bok yiyorsunuz benim evimde?!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:34",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "You ain’t hear all that outside? Now, now just hold on a minute.",
+      "translatedText": "Dışarıdaki kıyameti duymuyor musun? Bir saniye dur dinle.",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:40",
+      "speaker": "Tee Teyze",
+      "speakerGender": "[K]",
+      "originalText": "You are not allowed to just come in here.",
+      "translatedText": "Buraya öylece elini kolunu sallayarak giremezsiniz!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:43",
+      "speaker": "Tee Teyze",
+      "speakerGender": "[K]",
+      "originalText": "Every time I try to find some peace it’s something else!",
+      "translatedText": "Ne zaman biraz huzur bulayım desem başka bir bela çıkıyor!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:46",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "And that’s my fault?",
+      "translatedText": "Peki bu benim suçum mu?",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:48",
+      "speaker": "Tee Teyze",
+      "speakerGender": "[K]",
+      "originalText": "My AC! Don’t you climb out my motherfucking window!",
+      "translatedText": "Klimam! Sakın siktimin penceresinden dışarı tırmanmaya kalkmayın!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:52",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Aunt Tee! C’mon now!",
+      "translatedText": "Tee Teyze! Yapma gözünü seveyim!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:53",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Easy. Shit! - Aunt Tee! C’mon now!",
+      "translatedText": "Sakin ol. Kahretsin! - Tee Teyze! Yapma gözünü seveyim!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "05:54",
+      "speaker": "Raymond",
+      "speakerGender": "[E]",
+      "originalText": "Easy. Shit!",
+      "translatedText": "Sakin ol. Kahretsin!",
+      "scene": "SWAT Baskını & Kaçış"
+    },
+    {
+      "timestamp": "06:24",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Hey.",
+      "translatedText": "Selam.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:25",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Hey, Jay.",
+      "translatedText": "Selam Jay.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:26",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I bought these. What do you think?",
+      "translatedText": "Bunları aldım. Nasıl sence?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:28",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I can buy my own clothes, you know.",
+      "translatedText": "Kendi kıyafetlerimi kendim alabilirim, biliyorsun.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:30",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Sure you can. But would they look that good?",
+      "translatedText": "Tabii ki alırsın. Ama bu kadar güzel durur muydu?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:35",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Yeah, yeah. Okay.",
+      "translatedText": "Evet, evet. Pekala.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:36",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You know Brian wants us there for cocktails.",
+      "translatedText": "Brian'ın kokteyl için orada olmamızı istediğini biliyorsun.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:38",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Uh-huh.",
+      "translatedText": "Hı-hı.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:39",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You know what you’re gonna wear yet?",
+      "translatedText": "Ne giyeceğine karar verdin mi peki?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:41",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Relax, Jay.",
+      "translatedText": "Sakin ol Jay.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:45",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Okay, which do you think?",
+      "translatedText": "Tamam, sence hangisi?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:48",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Uhh... sequins?",
+      "translatedText": "Şey... pullu olan mı?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:51",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Sequins?",
+      "translatedText": "Pullu mu?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:52",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Okay, the other one.",
+      "translatedText": "Tamam, o zaman diğeri.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "06:56",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You know, what you're wearing right now looks pretty good, so... You wanna head out?",
+      "translatedText": "Şu an üzerindeki de gayet iyi duruyor aslında... Çıkalım mı?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:00",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I don’t wanna be late.",
+      "translatedText": "Geç kalmak istemiyorum.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:01",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, alright. Just gimme a few seconds.",
+      "translatedText": "Tamamdır. Bana birkaç saniye ver geliyorum.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:26",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Does life feel hopeless?",
+      "translatedText": "Hayat size umutsuz mu geliyor?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:28",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Are you constantly searching for a way out?",
+      "translatedText": "Sürekli bir çıkış yolu mu arıyorsunuz?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:31",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Luckily for you, those days are over thanks to Angstipan!",
+      "translatedText": "Şanslısınız ki Angstipan sayesinde o günler artık geride kaldı!",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:35",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Ah, the great outdoors. Nature’s playground.",
+      "translatedText": "Ah, muhteşem doğa. Tabiatın oyun alanı.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:39",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "A carnival of infinite possibilities.",
+      "translatedText": "Sonsuz olanaklar karnavalı.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:42",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Overflowing with creatures great and small.",
+      "translatedText": "Büyük ve küçük canlılarla dolup taşıyor.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:46",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Magnificent and proud.",
+      "translatedText": "Görkemli ve mağrur.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:49",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Hungry?",
+      "translatedText": "Aç mısınız?",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:52",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Not anymore.",
+      "translatedText": "Artık değil.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:53",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "Mouthwatering meats from the open range",
+      "translatedText": "Uçsuz bucaksız meralardan gelen ağız sulandırıcı etler",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "07:56",
+      "speaker": "TV Dış Sesi (Angstipan)",
+      "speakerGender": "[E]",
+      "originalText": "topped off with our world famous buns.",
+      "translatedText": "dünyaca ünlü ekmeklerimizle buluşuyor.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "08:01",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Ready.",
+      "translatedText": "Hazırım.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "08:02",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Damn. Worth the wait.",
+      "translatedText": "Vay canına. Beklediğimize değmiş.",
+      "scene": "Güvenli Ev & Hazırlık"
+    },
+    {
+      "timestamp": "08:15",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Here we go, finally.",
+      "translatedText": "İşte sonunda çıkıyoruz.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:17",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Okay, you’re wound up a little tight. What’s up?",
+      "translatedText": "Pekala, biraz fazla gerginsin. Ne oldu?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:21",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Nothing, I just don’t like being late.",
+      "translatedText": "Yok bir şey, sadece geç kalmayı sevmiyorum.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:24",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "We’re not that late.",
+      "translatedText": "O kadar da geç kalmadık.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:25",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Brian’s doing us a favor, you know? We need this intro, Lu.",
+      "translatedText": "Brian bize bir kıyak geçiyor, anlıyor musun? Bu tanışmaya ihtiyacımız var Lu.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:28",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I get it.",
+      "translatedText": "Anlıyorum.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:30",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You know, we’re in some deep fucking shit.",
+      "translatedText": "Biliyorsun, fena halde boğazımıza kadar boka batmış durumdayız.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:32",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I get that too.",
+      "translatedText": "Onu da anlıyorum.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:34",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Who is this guy? You know, besides Brian’s old cellmate.",
+      "translatedText": "Kim bu adam peki? Brian'ın eski koğuş arkadaşı olması dışında yani.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:38",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I know as much as you.",
+      "translatedText": "Ben de senin bildiğin kadarını biliyorum.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:39",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Cal might have said he was like former Dominican intelligence or something.",
+      "translatedText": "Cal galiba adamın eski Dominik istihbaratçısı olduğunu söylemişti.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:43",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Damn.",
+      "translatedText": "Vay canına.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:43",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "What?",
+      "translatedText": "Ne oldu?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:44",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Just kinda wish we weren’t running late.",
+      "translatedText": "Sadece geç kalmıyor olsaydık iyi olurdu.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:47",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Really, huh?",
+      "translatedText": "Cidden mi yani?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:49",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What? I didn’t know all this.",
+      "translatedText": "Ne var? Bütün bunları bilmiyordum ki.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:51",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Relationships are about communication, Jay.",
+      "translatedText": "İlişkiler iletişimle yürür Jay.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:54",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Sure, yeah I’m sorry.",
+      "translatedText": "Tabii, haklısın, özür dilerim.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:57",
+      "speaker": "Radyo DJ",
+      "speakerGender": "[E]",
+      "originalText": "Where you at, Vice City girls?",
+      "translatedText": "Neredesiniz Vice City kızları?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "08:59",
+      "speaker": "Radyo DJ",
+      "speakerGender": "[E]",
+      "originalText": "Fuck, oh no! Argh-uh!",
+      "translatedText": "Kahretsin, hayır! Aaaah!",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:02",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "What did I fucking say?",
+      "translatedText": "Ben ne dedim az önce sana?!",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:16",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What the hell are you doing?",
+      "translatedText": "Ne halt yiyorsun sen orada?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:18",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "You seeing this?",
+      "translatedText": "Bunu görüyor musun?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:19",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Well look who's back.",
+      "translatedText": "Bakın bakalım kimler dönmüş.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:35",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "What?",
+      "translatedText": "Ne?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:36",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Sometimes I’m just more comfortable when I have to use a gun, you know?",
+      "translatedText": "Bazen silah kullanmam gerektiğinde kendimi daha rahat hissediyorum, anlıyor musun?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:39",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Just be charming, 'kay?",
+      "translatedText": "Sadece sevimli ol yeter, tamam mı?",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:42",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yeah.",
+      "translatedText": "Pekala.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:43",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "And don’t worry about Brian. Dude’s retired.",
+      "translatedText": "Brian için de endişelenme. Herif emekliye ayrıldı artık.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:46",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I mean, look at Lori’s Snapmatic. Looks like they’re loving it.",
+      "translatedText": "Yani Lori'nin Snapmatic paylaşımlarına baksana, hallerinden çok memnun görünüyorlar.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "09:52",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "There they are. At the bar.",
+      "translatedText": "İşte oradalar. Barda oturuyorlar.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:02",
+      "speaker": "Lori",
+      "speakerGender": "[K]",
+      "originalText": "Oh my god, as I live and breathe. Look at the two of you.",
+      "translatedText": "Aman Tanrım, gözlerime inanamıyorum! Şunların tatlılığına bakın!",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:07",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Hey, Lori. It’s good to see you, Brian.",
+      "translatedText": "Selam Lori. Seni görmek çok güzel Brian.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:09",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Uh huh.",
+      "translatedText": "Hı-hı.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:10",
+      "speaker": "Lori",
+      "speakerGender": "[K]",
+      "originalText": "Oh, c’mere, give us a hug.",
+      "translatedText": "Gelin buraya, bir sarılın bakalım.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:12",
+      "speaker": "Lori",
+      "speakerGender": "[K]",
+      "originalText": "I told Brian, I thought you two were both dead for sure.",
+      "translatedText": "Brian'a söyledim, ikinizin de kesinlikle öldüğünü sanıyordum.",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:16",
+      "speaker": "Lori",
+      "speakerGender": "[K]",
+      "originalText": "Now, what have you gotten yourselves into? I wanna know everything.",
+      "translatedText": "Ee anlatın bakalım, ne işler açtınız başınıza? Her şeyi bilmek istiyorum!",
+      "scene": "Vice City & Brian ile Buluşma"
+    },
+    {
+      "timestamp": "10:25",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "I don’t know what this is.",
+      "translatedText": "Bunun ne olduğunu bilmiyorum.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:27",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "Look, I was just sightseeing with my girl.",
+      "translatedText": "Bakın, ben sadece kızımla şehri geziyordum.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:29",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "Do tourists carry these?",
+      "translatedText": "Turistler yanlarında bunlardan mı taşır?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:34",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "You fucking...",
+      "translatedText": "Seni lanet olası...",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:34",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "Shut up! - You fucking...",
+      "translatedText": "Kapa çeneni! - Seni lanet olası...",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:35",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "Hold on.",
+      "translatedText": "Bekleyin bir dakika.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:38",
+      "speaker": "Sokak Polisi",
+      "speakerGender": "[E]",
+      "originalText": "This is so fucked!",
+      "translatedText": "Bu durum fena halde sarpa sardı!",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:41",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Well, Brian was quite the stud back in the day.",
+      "translatedText": "Zamanında Brian tam bir afetti gerçi.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:44",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Was?!",
+      "translatedText": "Zamanında mı?!",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:46",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Wait...",
+      "translatedText": "Bekle...",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:47",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What’s up?",
+      "translatedText": "Ne oldu?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:48",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "That job, it has to be done tonight.",
+      "translatedText": "Şu işin bu gece bitirilmesi gerekiyor.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:50",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Tonight?",
+      "translatedText": "Bu gece mi?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:52",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "He wants it on the quiet. He only wants one of you.",
+      "translatedText": "Sessiz sedasız olmasını istiyor. Yalnızca birinizi istiyor.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:56",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Well.",
+      "translatedText": "Şey...",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:57",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "You know.",
+      "translatedText": "Bilirsin.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:59",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I don't mind.",
+      "translatedText": "Benim için sorun değil.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "10:59",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I mean, I...",
+      "translatedText": "Yani, ben...",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:00",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "If you wanted to.",
+      "translatedText": "Eğer sen istersen.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:02",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I’m gonna go.",
+      "translatedText": "Ben gideceğim.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:04",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Enjoy your dinner, guys. I’ll be back for dessert.",
+      "translatedText": "Yemeğinizin tadını çıkarın millet. Tatlıya yetişirim.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:07",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Well, I’ll walk you out, I need the ladies.",
+      "translatedText": "Ben de seninle çıkayım, lavaboya gitmem gerekiyordu zaten.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:09",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, let’s take in the view.",
+      "translatedText": "Evet, gel biraz manzarayı izleyelim.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:12",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "I never get to smoke these in front of Lori.",
+      "translatedText": "Lori'nin yanında bunları asla içemiyorum.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:18",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "I ever tell you about uh... the uh, fairground that rolled into my home town when I was a kid?",
+      "translatedText": "Sana çocukken kasabamıza gelen panayırdan bahsetmiş miydim hiç?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:25",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I don’t think so.",
+      "translatedText": "Sanmıyorum.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:27",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "They had bale mazes and Ferris wheel.",
+      "translatedText": "Saman balyası labirentleri ve dönme dolap vardı.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:30",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Hell, it was the highlight of the god damn summer for us kids.",
+      "translatedText": "Lanet olası yaz tatilinde biz çocukların en büyük eğlencesiydi.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:33",
+      "speaker": "Polis Memuru",
+      "speakerGender": "[E]",
+      "originalText": "Everybody, hands where we can see them!",
+      "translatedText": "Herkes ellerini görebileceğimiz bir yere kaldırsın!",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:35",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "And they had this beautiful carousel.",
+      "translatedText": "Ve harika bir atlıkarıncaları vardı.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:39",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "One night we snuck in and a buddy of mine, he got it working.",
+      "translatedText": "Bir gece gizlice içeri sızdık ve bir arkadaşım onu çalıştırmayı başardı.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:45",
+      "speaker": "Bar Müşterisi",
+      "speakerGender": "[E]",
+      "originalText": "Look what the law chased in.",
+      "translatedText": "Bakın bakalım kanun kimleri buraya kovalamış.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:48",
+      "speaker": "Bar Müşterisi",
+      "speakerGender": "[E]",
+      "originalText": "The locals are feisty!",
+      "translatedText": "Buranın yerlileri pek bir hırçın!",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:49",
+      "speaker": "Lori",
+      "speakerGender": "[K]",
+      "originalText": "Leonida, baby.",
+      "translatedText": "Leonida burası bebeğim.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:50",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Then he cranked the speed up so fast we thought we was flying.",
+      "translatedText": "Sonra hızı öyle bir kökledi ki uçuyoruz sandık.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "11:54",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What now?",
+      "translatedText": "Şimdi ne var?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:05",
+      "speaker": "Bar Güvenliği",
+      "speakerGender": "[E]",
+      "originalText": "Get down!",
+      "translatedText": "Siper alın!",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:05",
+      "speaker": "Bar Güvenliği",
+      "speakerGender": "[E]",
+      "originalText": "Watch out! - Get down!",
+      "translatedText": "Dikkat edin! - Siper alın!",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:05",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Watch out! - And I fucking jumped.",
+      "translatedText": "Dikkat edin! - Ve ben de kendimi aşağı fırlattım.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:05",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "And I fucking jumped.",
+      "translatedText": "Ve ben de kendimi aşağı fırlattım.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:09",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Jimmy Canto stayed on.",
+      "translatedText": "Jimmy Canto üzerinde kaldı.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:12",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Cracked his head open. Died that night.",
+      "translatedText": "Kafası yarıldı. O gece öldü.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:16",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You got a point?",
+      "translatedText": "Nereye bağlayacaksın bunu?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:17",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, yeah. You gotta know when to get off, Jason.",
+      "translatedText": "Evet. Ne zaman ineceğini bilmelisin Jason.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:23",
+      "speaker": "Brian",
+      "speakerGender": "[E]",
+      "originalText": "You hear me?",
+      "translatedText": "Duyuyor musun beni?",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:26",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Oh. Let's head back.",
+      "translatedText": "Hadi içeri dönelim.",
+      "scene": "Teras & Atlıkarınca Hikayesi"
+    },
+    {
+      "timestamp": "12:33",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Hey.",
+      "translatedText": "Selam.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:33",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Hey. Got this Raul guy’s car and heading to the address he gave.",
+      "translatedText": "Selam. Raul denen adamın arabasını aldım, verdiği adrese gidiyorum.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:38",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Nice. On my way.",
+      "translatedText": "Güzel. Ben de geliyorum.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:39",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yo, so I’ve been thinking, and",
+      "translatedText": "Dinle, düşünüyordum da...",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:42",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I don’t think we should tell him about, you know, our troubles. Not just yet.",
+      "translatedText": "Ona dertlerimizden bahsetmemeliyiz bence. Henüz değil.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:47",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Thought that was the whole point of this?",
+      "translatedText": "Bütün bu işin amacı bu değil miydi zaten?",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:48",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Look, he could sell us out. Or put a bullet through our heads.",
+      "translatedText": "Bak, bizi satabilir. Ya da kafamıza bir kurşun sıkabilir.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:51",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I mean seriously, what reason do we have to trust this guy?",
+      "translatedText": "Ciddi soruyorum, bu herife güvenmek için ne sebebimiz var?",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "12:55",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Alright, so how you wanna play it?",
+      "translatedText": "Pekala, nasıl bir taktik izlemek istiyorsun?",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:06",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Ok. See you there.",
+      "translatedText": "Tamam. Orada görüşürüz.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:09",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yep.",
+      "translatedText": "Görüşürüz.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:11",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "You miss me?",
+      "translatedText": "Özledin mi beni?",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:12",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I’ve been busy. You gonna text this guy?",
+      "translatedText": "İşim başımdan aşkındı. Şu adama mesaj atacak mısın?",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:15",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Dude could be a cop for all we know.",
+      "translatedText": "Bildiğimiz kadarıyla adam polis bile çıkabilir.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:16",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "He’s not a cop, alright? He’s just cautious.",
+      "translatedText": "Polis falan değil, tamam mı? Sadece temkinli.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:20",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "It’s probably why he survived so long. We could learn something.",
+      "translatedText": "Muhtemelen bunca yıl bu sayede hayatta kaldı. Ondan bir şeyler öğrenebiliriz.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:23",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Maybe you could.",
+      "translatedText": "Belki sen öğrenebilirsin.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:25",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Yeah, you’re the perfect criminal.",
+      "translatedText": "Tabii, sen dört dörtlük bir suçlusun ne de olsa.",
+      "scene": "Raul ile Randevu & Araba Teslimatı"
+    },
+    {
+      "timestamp": "13:29",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Jason? Lucia?",
+      "translatedText": "Jason? Lucia?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:31",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Yeah.",
+      "translatedText": "Evet.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:33",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "We gotta go.",
+      "translatedText": "Hemen gitmemiz gerek.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:34",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Go?",
+      "translatedText": "Gitmek mi?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:34",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, go. Like, right fucking now.",
+      "translatedText": "Evet, gitmek. Tam şu saniye!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:37",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "What you think I needed a lift for?",
+      "translatedText": "Beni arabayla almanı niye istedim sanıyorsun?!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:39",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Shit. He’s cautious alright.",
+      "translatedText": "Kahretsin. Cidden fazlasıyla temkinliymiş.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:42",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Go, go! Goddamn psycho, show me what kinda driver you are!",
+      "translatedText": "Bas gaza bas! Tanrının cezası psikopat, göster bakalım nasıl bir şoförsün!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:49",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Hey, bro, get your ass back here man.",
+      "translatedText": "Hey birader, kıçını arkaya çek hemen!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:51",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Huh?",
+      "translatedText": "Ne?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:51",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Come on, you gotta hold these fuckers off.",
+      "translatedText": "Hadi, şu piçleri oyalaman lazım!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:55",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "I got a little something for you to play with.",
+      "translatedText": "Oynaman için sana ufak bir hediye ayarladım.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "13:57",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Here, you take this.",
+      "translatedText": "Al, şunu tut.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:01",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "It’s getting crowded here.",
+      "translatedText": "Burası fena halde kalabalıklaşıyor!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:06",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I’m going to punch through to the freeway!",
+      "translatedText": "Otoyola doğru kırıp yardıracağım!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:11",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Negative. Stay local.",
+      "translatedText": "Olmaz! Ara sokaklarda kal!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:13",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Ok.",
+      "translatedText": "Tamamdır.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:15",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Jay, hang on!",
+      "translatedText": "Jay, sıkı tutun!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:23",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Don’t get us trapped in here, Lu!",
+      "translatedText": "Bizi buraya sıkıştırma sakın Lu!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:24",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "No, no, no. This is good. Keep cutting through.",
+      "translatedText": "Hayır hayır, bu yol iyi. Ara sokaklardan devam et!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:34",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Back up into this alley here.",
+      "translatedText": "Şu ara sokağa geri geri yanaş.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:35",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Ok.",
+      "translatedText": "Tamam.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:44",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "That’s it. Good. Ahora we just chill here for a minute.",
+      "translatedText": "İşte bu kadar. Güzel. Şimdi burada bir dakika soluklanacağız.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:50",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Fuckin’ shit show.",
+      "translatedText": "Tam bir kepazelikti.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:52",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "You want me to take the wheel?",
+      "translatedText": "Direksiyona benim geçmemi ister misin?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:53",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What? No.",
+      "translatedText": "Ne? Hayır tabii ki.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "14:55",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Look, you think everything always goes as planned, huh? No, mami, no.",
+      "translatedText": "Bak, her şeyin her zaman planlandığı gibi gideceğini mi sanıyorsun? Yok öyle bir şey güzelim.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:00",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "There will always be some kind of bullshit.",
+      "translatedText": "Her zaman ters giden bir bokluk çıkar.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:01",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "A professional adapts. Are you a professional, Lucia, hm?",
+      "translatedText": "Profesyonel dediğin ayak uydurur. Sen bir profesyonel misin Lucia, ha?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:05",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Of course.",
+      "translatedText": "Elbette.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:07",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Good, I need a professional.",
+      "translatedText": "Güzel, bana bir profesyonel lazım.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:11",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Shit...",
+      "translatedText": "Kahretsin...",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:13",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I see him.",
+      "translatedText": "Gördüm onu.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:14",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "I think he saw us too. Let’s go!",
+      "translatedText": "Sanırım o da bizi gördü. Gazla!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:19",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Let's go!",
+      "translatedText": "Hadi gidelim!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:22",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Move! Move it!",
+      "translatedText": "Bas gaza! Yürü!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:41",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Is this fucking real now?",
+      "translatedText": "Gerçekten bunu mu yaşıyoruz şimdi?!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:48",
+      "speaker": "Polis Telsizi",
+      "speakerGender": "[E]",
+      "originalText": "Shit. Don’t have eyes on suspect’s vehicle.",
+      "translatedText": "Kahretsin! Şüpheli araç görüş açımızdan çıktı!",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "15:55",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Okay, out. Don’t leave anything in here.",
+      "translatedText": "Tamam, inin. İçeride hiçbir şey bırakmayın.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:12",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Alright, Jason, we’re cargo.",
+      "translatedText": "Tamam Jason, yükümüzü boşalttık.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:15",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Copy.",
+      "translatedText": "Anlaşıldı.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:18",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Maybe some warning next time?",
+      "translatedText": "Gelecek sefere önceden haber versen nasıl olur?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:21",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "What should I tell you, to put it in your calendar?",
+      "translatedText": "Ne diyeyim, takvimine randevu mu yazdırayım?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:23",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Friday morning, bank robbery. Come on.",
+      "translatedText": "'Cuma sabahı banka soygunu' gibi mi? Hadi ama.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:28",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "We pass the test?",
+      "translatedText": "Testi geçtik mi bari?",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:30",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "You did fine. We’re still alive.",
+      "translatedText": "İyi iş çıkardınız. Hâlâ hayattayız.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:40",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "This could be the start of, uh, something good.",
+      "translatedText": "Bu güzel bir şeylerin başlangıcı olabilir.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:44",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Keep your phones on.",
+      "translatedText": "Telefonlarınız açık kalsın.",
+      "scene": "Raul Bautista & Sokak Çatışması"
+    },
+    {
+      "timestamp": "16:47",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Oh, mamita! So nice to see you!",
+      "translatedText": "Ah mamita! Seni görmek ne kadar güzel!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "16:50",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Oh hey.",
+      "translatedText": "Selam.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "16:51",
+      "speaker": "Raul Bautista",
+      "speakerGender": "[E]",
+      "originalText": "Take me to the loot, baby. I need to see it!",
+      "translatedText": "Beni ganimete götür bebeğim. Kendi gözlerimle görmem lazım!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "16:54",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Does this mean we’re in his crew?",
+      "translatedText": "Bu onun ekibine girdiğimiz anlamına mı geliyor?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "16:56",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, I think so.",
+      "translatedText": "Evet, sanırım öyle.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "16:58",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "You think he can help us?",
+      "translatedText": "Bize yardım edebileceğine inanıyor musun?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:00",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "We don’t have any better ideas, do we?",
+      "translatedText": "Daha iyi bir fikrimiz var mı sanki?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:03",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Where are we?",
+      "translatedText": "Neredeyiz biz?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:04",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Back in Bayside.",
+      "translatedText": "Bayside'a geri döndük.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:05",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Wanna take a look around?",
+      "translatedText": "Etrafa bir göz atmak ister misin?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:20",
+      "speaker": "Bayside Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Elbows in tight, you wanna thrust!",
+      "translatedText": "Dirsekleri içeri çek, ileri doğru hamle yap!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:27",
+      "speaker": "Bayside Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Oh y-yeah!",
+      "translatedText": "Oh evet!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:34",
+      "speaker": "Bayside Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Yo, Jay! What’s happening, baby?",
+      "translatedText": "Selam Jay! Neler oluyor yakışıklı?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:34",
+      "speaker": "Bayside Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Yo... - Yo, Jay! What’s happening, baby?",
+      "translatedText": "Selam... - Selam Jay! Neler oluyor yakışıklı?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:35",
+      "speaker": "Bayside Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Yo, Jay! What’s happening, baby?",
+      "translatedText": "Selam Jay! Neler oluyor yakışıklı?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:36",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "What’s up, man?",
+      "translatedText": "Naber dostum?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:37",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Loony! What's up, girl?",
+      "translatedText": "Çatlak! Naber kızım?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:40",
+      "speaker": "Bayside Sakini",
+      "speakerGender": "[E]",
+      "originalText": "Ass up! Booty, booty, booty, twerk!",
+      "translatedText": "Kaldır kıçını! Salla, salla, twerk yap!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "17:59",
+      "speaker": "Bayside Güvenliği",
+      "speakerGender": "[E]",
+      "originalText": "Just try to keep it clean.",
+      "translatedText": "Temiz oynamaya çalış yeter.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:01",
+      "speaker": "Bayside Güvenliği",
+      "speakerGender": "[E]",
+      "originalText": "To hell with you!",
+      "translatedText": "Cehenneme kadar yolun var!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:02",
+      "speaker": "Bayside Güvenliği",
+      "speakerGender": "[E]",
+      "originalText": "Hey! I’m watching you.",
+      "translatedText": "Hey! Gözüm üzerinde.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:06",
+      "speaker": "Polis Telsizi",
+      "speakerGender": "[E]",
+      "originalText": "Cops are on their way.",
+      "translatedText": "Polisler yolda!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:12",
+      "speaker": "Canlı Yayıncı",
+      "speakerGender": "[E]",
+      "originalText": "Oh shit! Who the fuck are you?",
+      "translatedText": "Hassiktir! Kimsiniz lan siz?!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:15",
+      "speaker": "Canlı Yayıncı",
+      "speakerGender": "[E]",
+      "originalText": "What the fuck is this?",
+      "translatedText": "Bu da ne sikim bir şey böyle?!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:16",
+      "speaker": "Canlı Yayıncı",
+      "speakerGender": "[E]",
+      "originalText": "Oh, the trunk challenge!",
+      "translatedText": "Aha, bagaj challenge'ı!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:17",
+      "speaker": "Canlı Yayıncı",
+      "speakerGender": "[E]",
+      "originalText": "Wait, did you steal my friend’s car?",
+      "translatedText": "Bekle, sen arkadaşımın arabasını mı çaldın?!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:20",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Yeah.",
+      "translatedText": "Aynen.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:20",
+      "speaker": "Canlı Yayıncı",
+      "speakerGender": "[E]",
+      "originalText": "Holy shit, chat! What do I do?",
+      "translatedText": "Siktir chat! Ne yapacağım ben şimdi?!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:23",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Jesus.",
+      "translatedText": "Tanrım ya.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:25",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Look, look, look, look, look. Look.",
+      "translatedText": "Bak, bak, bak, bak... Şuraya bak!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "18:26",
+      "speaker": "Canlı Yayıncı",
+      "speakerGender": "[E]",
+      "originalText": "The actual cops are chasing us.",
+      "translatedText": "Bildiğin gerçek polisler peşimizde!",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "19:05",
+      "speaker": "Yoldan Geçen",
+      "speakerGender": "[E]",
+      "originalText": "I bet you’d be real good at battle rapping, dog.",
+      "translatedText": "Bahse girerim rap atışmalarında fena döktürürsün dostum.",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "19:07",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Oh, yeah?",
+      "translatedText": "Öyle mi dersin?",
+      "scene": "Bayside & Canlı Yayın Kovalamacası"
+    },
+    {
+      "timestamp": "19:08",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Lucia, Jason. Come take a seat.",
+      "translatedText": "Lucia, Jason. Gelin şöyle oturun.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:11",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "I’m waiting on the ETA for the flight.",
+      "translatedText": "Uçağın tahmini iniş saatini bekliyorum.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:14",
+      "speaker": "Lounge Garsonu",
+      "speakerGender": "[K]",
+      "originalText": "Can I get you anything?",
+      "translatedText": "Size bir şey ikram edeyim mi?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:15",
+      "speaker": "Lounge Garsonu",
+      "speakerGender": "[K]",
+      "originalText": "Tea, coffee, champagne?",
+      "translatedText": "Çay, kahve, şampanya?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:17",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Three more champagnes. Thank you.",
+      "translatedText": "Üç şampanya daha lütfen. Teşekkürler.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:18",
+      "speaker": "Lounge Garsonu",
+      "speakerGender": "[K]",
+      "originalText": "Be right back.",
+      "translatedText": "Hemen dönüyorum.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:19",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Trust me, a slight buzz will only help you.",
+      "translatedText": "İnanın bana, hafif bir çakırkeyiflik sadece işinize yarar.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:22",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "So Val, I know it’s a party but we are working, right?",
+      "translatedText": "Dinle Val, parti olduğunu biliyorum ama iş için buradayız, değil mi?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:25",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "The job is Andrés de León. Protect him but keep him in line.",
+      "translatedText": "Göreviniz Andrés de León. Onu koruyun ama çizgisinden çıkmasına izin vermeyin.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:31",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Gas him up. Boost his ego. Make him feel good about himself.",
+      "translatedText": "Gaz verin, egosunu okşayın. Kendini önemli hissetmesini sağlayın.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:35",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Babysit.",
+      "translatedText": "Yani çocuk bakıcılığı.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:35",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Mhm.",
+      "translatedText": "Aynen öyle.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:36",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Hey! There is a sight for sore eyes. Tina! What’s up, chula?",
+      "translatedText": "Hey! İşte görmek istediğim güzellik! Tina! Naber tatlım?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:41",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Andrés! It's been forever, how is everything?",
+      "translatedText": "Andrés! Asırlar oldu görüşmeyeli, nasıl gidiyor?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:45",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Ah, man, it’s been non-stop.",
+      "translatedText": "Ah sorma dostum, dur durak bilmiyoruz.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:46",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Lucia, Jason. Please meet Andrés de León.",
+      "translatedText": "Lucia, Jason. Andrés de León ile tanışın lütfen.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:49",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Sorry guys, I’m a hugger. I’m a hugger, come in here, get in here!",
+      "translatedText": "Kusura bakmayın millet, sarılmayı çok severim! Gelin buraya, sarılın bakalım!",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:51",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Oh.",
+      "translatedText": "Ah.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:52",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Yes! Alright!",
+      "translatedText": "İşte böyle! Harika!",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:53",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Beautiful, beautiful, yes. Gorgeous! Alright, strong. Good job.",
+      "translatedText": "Çok güzel, muhteşem! Harika, güçlü. Aferin size.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:58",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Should we go, gentlemen?",
+      "translatedText": "Gidelim mi beyler?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "19:59",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "I guess you're the driver?",
+      "translatedText": "Sanırım şoförümüz sensin?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "20:00",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Sure. - I guess you're the driver?",
+      "translatedText": "Elbette. - Sanırım şoförümüz sensin?",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "20:00",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Sure. - Alright, let’s go.",
+      "translatedText": "Elbette. - Pekala, hadi gidelim.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "20:00",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Alright, let’s go.",
+      "translatedText": "Pekala, hadi gidelim.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "20:01",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Ah, c’mon.",
+      "translatedText": "Hadi ama.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "20:03",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Alright. We’re good.",
+      "translatedText": "Tamamdır. Hazırız.",
+      "scene": "VIP Brifing & Andrés ile Tanışma"
+    },
+    {
+      "timestamp": "20:04",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Ah fuck it, you ready for this party bro?",
+      "translatedText": "Aman siktir et, bu partiye hazır mısın kardeşim?",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:06",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I don’t know, maybe.",
+      "translatedText": "Bilmiyorum, belki.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:07",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Alright.",
+      "translatedText": "Pekala.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:08",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "I’m ready for a party I don’t know about this party.",
+      "translatedText": "Normal bir partiye hazırım da bu partiyi bilemem.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:11",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Oh shit, okay.",
+      "translatedText": "Hassiktir, anlaşıldı.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:12",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Hey driver, what was your name again?",
+      "translatedText": "Hey şoför, adın neydi senin?",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:23",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Assholes! We're coming!",
+      "translatedText": "Göt herifler! Geliyoruz!",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:38",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Alright.",
+      "translatedText": "Tamamdır.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:38",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Here we go.",
+      "translatedText": "İşte geldik.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:43",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Woo!",
+      "translatedText": "Vuhuu!",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:44",
+      "speaker": "Megamundo Karşılama Görevlisi",
+      "speakerGender": "[K]",
+      "originalText": "Welcome. How was your flight, sir?",
+      "translatedText": "Hoş geldiniz efendim. Uçuşunuz nasıldı?",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:46",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, yeah, real good time!",
+      "translatedText": "Evet evet, çok eğlenceliydi!",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:47",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Hey, those waitresses were all NDA’d, yeah?",
+      "translatedText": "Hey, o hosteslerin hepsine gizlilik sözleşmesi imzalatıldı değil mi?",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:49",
+      "speaker": "Megamundo Karşılama Görevlisi",
+      "speakerGender": "[K]",
+      "originalText": "The flight attendants? Yes, of course.",
+      "translatedText": "Uçuş görevlilerine mi? Evet, tabii ki.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:50",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "NDA after the fact? That’s a rookie move, bro.",
+      "translatedText": "İş bittikten sonra gizlilik imzalatmak mı? Tam çaylak hareketi birader.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:53",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "And you guys got our room sorted?",
+      "translatedText": "Bizim odayı ayarladınız mı peki?",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:54",
+      "speaker": "Megamundo Karşılama Görevlisi",
+      "speakerGender": "[K]",
+      "originalText": "Yes, it’s all ready for you. 24th floor executive conference room.",
+      "translatedText": "Evet, her şey sizin için hazır. 24. kat yönetici toplantı salonu.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "20:58",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Perfect! Let’s go freshen up, bro.",
+      "translatedText": "Mükemmel! Hadi gidip biraz kendimize gelelim birader.",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "21:00",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Let’s do it!",
+      "translatedText": "Hadi yapalım şunu!",
+      "scene": "Megamundo Kulesi & VIP Girişi"
+    },
+    {
+      "timestamp": "21:02",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Hey, honey, so a couple of Elonzo’s producer friends are in town",
+      "translatedText": "Hey tatlım, Elonzo'nun yapımcı arkadaşlarından birkaçı şehirdeymiş",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:04",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "and we’re gonna do a deep dive into my creative roadmap.",
+      "translatedText": "ve benim yaratıcı yol haritamın derinliklerine ineceğiz.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:07",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "So, we’ll be up in the conference room doing a little business hang",
+      "translatedText": "Toplantı salonunda küçük bir iş takılması yapacağız",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:09",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "you know, think-tank stuff. 'Kay?",
+      "translatedText": "bilirsin işte, beyin fırtınası falan. Tamam mı?",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:11",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "Seriously? Right now?",
+      "translatedText": "Cidden mi? Tam şu anda mı?",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:13",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, baby, you snooze you lose!",
+      "translatedText": "Evet bebeğim, uyursan kaybedersin!",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:14",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "In Spanish: Unbelievable.",
+      "translatedText": "İnanılmaz gerçekten.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:16",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Petra, can I introduce you to Andrés’ new security detail?",
+      "translatedText": "Petra, seni Andrés'in yeni koruma ekibiyle tanıştırabilir miyim?",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:20",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Jason and Lucia, this is Petra Navarro, COO of Megamundo.",
+      "translatedText": "Jason ve Lucia, bu Petra Navarro, Megamundo'nun Operasyon Direktörü.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:24",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "Yes, good. - Jason and Lucia, this is Petra Navarro, COO of Megamundo.",
+      "translatedText": "Evet, güzel. - Jason ve Lucia, bu Petra Navarro, Megamundo'nun Operasyon Direktörü.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:24",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "Yes, good.",
+      "translatedText": "Evet, güzel.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:25",
+      "speaker": "Lobi Görevlisi",
+      "speakerGender": "[E]",
+      "originalText": "Can I take you up?",
+      "translatedText": "Sizi yukarı çıkarayım mı?",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:26",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "Yes, please. Let’s go. I don’t want to spend the whole night in the lobby.",
+      "translatedText": "Evet lütfen. Hadi gidelim, bütün geceyi lobide geçirmek istemiyorum.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:33",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "Let him do what he does, then I want him down here, ok?",
+      "translatedText": "Bırakın ne yapıyorsa yapsın ama sonra derhal buraya indirilsin, tamam mı?",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:36",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You got it.",
+      "translatedText": "Nasıl isterseniz.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:36",
+      "speaker": "Gustavo",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Evening, ladies.",
+      "translatedText": "İyi akşamlar bayanlar.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:38",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "Gustavo, I want you to meet Lucia.",
+      "translatedText": "Gustavo, seni Lucia ile tanıştırmak istiyorum.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:41",
+      "speaker": "Valentina",
+      "speakerGender": "[K]",
+      "originalText": "She’s part of the new security detail that we hired for Andrés.",
+      "translatedText": "Andrés için tuttuğumuz yeni güvenlik ekibinden kendisi.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "21:57",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Some security guy just took my guns.",
+      "translatedText": "Güvenlikteki herif silahlarımı aldı.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "22:00",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "It’s a good thing you’re good with your hands.",
+      "translatedText": "Yumruklarını iyi kullanman iyi bir şey.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "22:01",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "These guys seem to have it covered. We should be fine.",
+      "translatedText": "Bu elemanlar durumu kontrol altına almış görünüyor. Sorun çıkmaz.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "22:03",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Okay.",
+      "translatedText": "Pekala.",
+      "scene": "Yönetici Katı & Petra Navarro Brifingi"
+    },
+    {
+      "timestamp": "22:05",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Do it bro! Do it, do it, do it!",
+      "translatedText": "Yap şunu birader! Yap, yap, yap!",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:07",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Here I come!",
+      "translatedText": "İşte geliyorum!",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:11",
+      "speaker": "Özel Güvenlik",
+      "speakerGender": "[E]",
+      "originalText": "A private meeting. Don’t come in!",
+      "translatedText": "Özel toplantı var! İçeri girmeyin!",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:13",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Hey, Andrés.",
+      "translatedText": "Hey Andrés.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:14",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Whoa whoa, hey hey, its ok it’s ok, he’s my guy it’s my guy it’s my guy.",
+      "translatedText": "Sakin olun beyler, sorun yok, o benim adamım, benim adamım o.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:17",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Hey, buddy. Just uh, haha, christening the new building.",
+      "translatedText": "Selam dostum. Biz de yeni binanın şerefine kadeh kaldırıyorduk.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:20",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Hey, man.",
+      "translatedText": "Selam dostum.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:21",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Oh, sorry to interrupt.",
+      "translatedText": "Kusura bakmayın, böldüğüm için özür dilerim.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:23",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Aye, man can you run and get us a bottle of tequila, some sparkling water, a few beers you know",
+      "translatedText": "Dostum sana zahmet bir koşu bize bir şişe tekila, biraz maden suyu ve birkaç bira kapsana",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:28",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "just a selection of shit to drink, yeah? Thanks, buddy. Yeah.",
+      "translatedText": "kafamıza göre takılacak bir şeyler işte. Eyvallah koçum.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:31",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Uh huh, so they just called and asked me to bring you down to the party now.",
+      "translatedText": "Hı-hı, az önce arayıp seni derhal partiye indirmemi istediler.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:35",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Petra wants you. There’s some big speech happening.",
+      "translatedText": "Petra seni çağırıyor. Büyük bir konuşma yapılacakmış.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:37",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "No! No fuck, fuck that shit. Ha, fuck that.",
+      "translatedText": "Hayır! Sikmişim konuşmasını, siktir et onu.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:40",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, sorry no. Hard pass, man. We’re on a roll here, you know. - No! No fuck, fuck that shit. Ha, fuck that.",
+      "translatedText": "Aynen, kusura bakmasınlar. Biz burada tam havamızı yakalamışız dostum. - Hayır! Sikmişim konuşmasını!",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:41",
+      "speaker": "Yapımcı",
+      "speakerGender": "[E]",
+      "originalText": "Yeah, sorry no. Hard pass, man. We’re on a roll here, you know.",
+      "translatedText": "Kusura bakmasınlar, kalsın. Biz burada tam havamızı yakalamışız dostum.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:44",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Frontal cortex is in overdrive, I mean, how many ideas did I just have in the last five minutes, bro?",
+      "translatedText": "Beyin hücrelerim cayır cayır yanıyor, son beş dakikada aklıma kaç tane efsane fikir geldi biliyor musun?",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:48",
+      "speaker": "Yapımcı",
+      "speakerGender": "[E]",
+      "originalText": "So many, bro, so fucking many.",
+      "translatedText": "Sayısız birader, fena fikirler!",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:50",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "It’s like the band is back together and I just met these fucking guys.",
+      "translatedText": "Sanki efsane grup yeniden birleşmiş gibi ve ben bu heriflerle daha yeni tanıştım!",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:54",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "C’mon, guys.",
+      "translatedText": "Hadi ama beyler.",
+      "scene": "Konferans Odası & Beyin Fırtınası"
+    },
+    {
+      "timestamp": "22:56",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "Hello, everyone.",
+      "translatedText": "Herkese merhaba.",
+      "scene": "Gala Açılış Konuşması"
+    },
+    {
+      "timestamp": "22:58",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "I just want to thank you all for coming here tonight to join us in celebrating the opening",
+      "translatedText": "Bu gece Megamundo'nun Amerikan topraklarındaki",
+      "scene": "Gala Açılış Konuşması"
+    },
+    {
+      "timestamp": "23:02",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "of Megamundo’s first corporate headquarters on American soil.",
+      "translatedText": "ilk şirket merkezinin açılışını kutlamak için aramızda bulunan herkese teşekkür ederim.",
+      "scene": "Gala Açılış Konuşması"
+    },
+    {
+      "timestamp": "23:09",
+      "speaker": "Petra Navarro",
+      "speakerGender": "[K]",
+      "originalText": "We all did this together. As a family.",
+      "translatedText": "Bunu hep birlikte başardık. Bir aile olarak.",
+      "scene": "Gala Açılış Konuşması"
+    },
+    {
+      "timestamp": "23:15",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "The party’s over!",
+      "translatedText": "Parti bitti!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:17",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "Everybody! On the ground! Now!",
+      "translatedText": "Herkes yere yatsın! Derhal!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:19",
+      "speaker": "Gala Davetlisi",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: What the hell?",
+      "translatedText": "Ne oluyor lan orada?!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:20",
+      "speaker": "Megamundo Koruması",
+      "speakerGender": "[E]",
+      "originalText": "Protect the asset.",
+      "translatedText": "Hedefi koruyun! Andrés'i koruyun!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:21",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Shit!",
+      "translatedText": "Kahretsin!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:22",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "Move, move, move! Move, move, move, move!",
+      "translatedText": "Kımıldayın, kımıldayın! Çabuk, çabuk!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:54",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "Move!",
+      "translatedText": "Yürüyün!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:55",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Hey, hey, hey, hey! Give me the phone.",
+      "translatedText": "Hey, telefonu ver bana hemen!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:57",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Who am I going to call? I’m not stupid.",
+      "translatedText": "Kimi arayacağım sanki? Aptal değilim ben!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "23:59",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Sup, guys. How’s it going down there?",
+      "translatedText": "Selam beyler, aşağıda durumlar nasıl?",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:02",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "Who the fuck is this?",
+      "translatedText": "Kimsin lan sen?!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:03",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "We’ll talk more later, okay?",
+      "translatedText": "Sonra uzun uzun konuşuruz, tamam mı?",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:05",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: What the fuck?",
+      "translatedText": "Ne oluyor lan?!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:08",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: We got a problem.",
+      "translatedText": "Başımız belada!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:09",
+      "speaker": "Silahlı Baskıncı",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Shit, shit, grenade!",
+      "translatedText": "Kahretsin, el bombası!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:16",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Nice distraction, Jay. A bit dramatic.",
+      "translatedText": "Güzel dikkat dağıttın Jay. Biraz abartılı oldu gerçi.",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:19",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "You're welcome. Going upstairs. He’s got Andrés.",
+      "translatedText": "Bir şey değil. Üst kata çıkıyorum, Andrés'i rehin aldı!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:21",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Shit, okay. On my way.",
+      "translatedText": "Kahretsin, tamam. Geliyorum!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:34",
+      "speaker": "Jason",
+      "speakerGender": "[E]",
+      "originalText": "Lu? Lu? Fuck.",
+      "translatedText": "Lu? Lu?! Kahretsin!",
+      "scene": "Gala Baskını & Çatışma"
+    },
+    {
+      "timestamp": "24:36",
+      "speaker": "Saldırgan Çete Lideri",
+      "speakerGender": "[E]",
+      "originalText": "In Spanish: Motherfucker, fucking fuck!",
+      "translatedText": "Orospu çocuğu, siktiğimin piçi!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:38",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Not the face, man! Not the face!",
+      "translatedText": "Yüzüme vurma abi! Yüzüme vurma!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:39",
+      "speaker": "Saldırgan Çete Lideri",
+      "speakerGender": "[E]",
+      "originalText": "Where’s the money?",
+      "translatedText": "Para nerede lan?!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:40",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "I don't know!",
+      "translatedText": "Bilmiyorum!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:40",
+      "speaker": "Saldırgan Çete Lideri",
+      "speakerGender": "[E]",
+      "originalText": "Where’s the fucking money? - I don't know!",
+      "translatedText": "Siktimin parası nerede?! - Bilmiyorum!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:41",
+      "speaker": "Saldırgan Çete Lideri",
+      "speakerGender": "[E]",
+      "originalText": "Where’s the fucking money?",
+      "translatedText": "Siktimin parası nerede dedim?!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:41",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Wait, wait, wait, wait, wait! Ahhh!",
+      "translatedText": "Bekle, bekle, dur, yapma! Aaaah!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:44",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "I don't know, man! They don't tell me shit!",
+      "translatedText": "Bilmiyorum dostum! Bana hiçbir bok söylemiyorlar!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:46",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Ughhhh!",
+      "translatedText": "Aaaargh!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "24:48",
+      "speaker": "Andrés de León",
+      "speakerGender": "[E]",
+      "originalText": "Jay dog!",
+      "translatedText": "Jay dostum!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "25:30",
+      "speaker": "Saldırgan Çete Lideri",
+      "speakerGender": "[E]",
+      "originalText": "Ahhhggg!!",
+      "translatedText": "Aaaah!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "25:33",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Hurts, right? Try wearing them, bitch.",
+      "translatedText": "Acıttı, değil mi? Bir de topuklularla koşmayı dene orospu!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "25:40",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "In Spanish: I don't think so, bitch!",
+      "translatedText": "Pek sanmıyorum sürtük!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "25:41",
+      "speaker": "Lucia",
+      "speakerGender": "[K]",
+      "originalText": "Ah, shit!",
+      "translatedText": "Ah, kahretsin!",
+      "scene": "Çatı Katı Hesaplaşması & Kurtarma"
+    },
+    {
+      "timestamp": "25:48",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "Might not feel like it but these are your glory days.",
+      "translatedText": "Belki şu an farkında değilsiniz ama bunlar hayatınızın altın çağları.",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "25:53",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "The salad years, you know?",
+      "translatedText": "Gençliğin o deli dolu yılları, anlıyor musunuz?",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "25:55",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "Nothing is going to beat who you are now.",
+      "translatedText": "Şu an olduğunuz kişiden ve bu andan daha güzeli asla olmayacak.",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "25:58",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "You can’t see all the fucked up shit that’s looming on the horizon.",
+      "translatedText": "Ufukta yaklaşmakta olan onca karanlık pisliği henüz göremiyorsunuz.",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "26:04",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "Enjoy this, dude.",
+      "translatedText": "Bunun tadını çıkar dostum.",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "26:05",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "If this right now was all that there is...",
+      "translatedText": "Eğer şu an sahip olduklarımız, var olan her şey olsaydı...",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "26:08",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "all the time.",
+      "translatedText": "her zaman böyle kalsaydı...",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "26:10",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "It would be perfect.",
+      "translatedText": "Kusursuz olurdu.",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    },
+    {
+      "timestamp": "26:15",
+      "speaker": "Cal Hampton",
+      "speakerGender": "[E]",
+      "originalText": "Trust me.",
+      "translatedText": "İnan bana.",
+      "scene": "Leonida Gün Batımı & Kapanış"
+    }
+  ]
+}
